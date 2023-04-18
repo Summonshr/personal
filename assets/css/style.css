@@ -1004,6 +1004,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position:left;
   transition: var(--transition-1);
 }
 
@@ -1071,6 +1072,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position:left;
   transition: var(--transition-1);
 }
 
