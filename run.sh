@@ -10,4 +10,3 @@ echo "Last Updated att $date" > README.md
 git add . 
 git commit -m "Updated"
 git push
-
