@@ -7,6 +7,7 @@ git pull
 sed -i '$d' index.html
 echo "<!-- Last updated at $date -->" >> index.html
 echo "Last Updated att $date" > README.md
+touch "$date.md"
 git add . 
-git commit -m "Updated"
+git commit -m "Updated date value to $date"
 git push
