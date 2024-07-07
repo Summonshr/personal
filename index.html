@@ -1,413 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Suman Shrestha | Laravel Developer in Nepal</title>
-        <meta name="description"
-            content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications.">
-        <meta name="keywords" content="Laravel Developer, Nepal, Web Development, PHP, Suman Shrestha">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Suman Shrestha | Laravel Developer in Nepal</title>
+      <meta
+        name="description"
+        content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
+      />
+      <meta
+        name="keywords"
+        content="Laravel Developer, Nepal, Web Development, PHP, Suman Shrestha"
+      />
 
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.sumanshresth.com.np/">
-        <meta property="og:title" content="Suman Shrestha | Top Laravel Developer in Nepal">
-        <meta property="og:description"
-            content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications.">
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.sumanshresth.com.np/" />
+      <meta
+        property="og:title"
+        content="Suman Shrestha | Top Laravel Developer in Nepal"
+      />
+      <meta
+        property="og:description"
+        content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
+      />
 
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://www.sumanshresth.com.np/">
-        <meta property="twitter:title" content="Suman Shrestha | Top Laravel Developer in Nepal">
-        <meta property="twitter:description"
-            content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications.">
-
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://www.sumanshresth.com.np/" />
+      <meta
+        property="twitter:title"
+        content="Suman Shrestha | Top Laravel Developer in Nepal"
+      />
+      <meta
+        property="twitter:description"
+        content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
+      />
     </head>
     <style>
-        :root {
-            --primary-color: #0d1017;
-            --secondary-color: #3a8bd6;
-            --background-color: #f7f7f8;
-            --text-color: #222222;
-            --link-color: #3a8bd6;
-        }
+      :root {
+        --primary-color: #0d1017;
+        --secondary-color: #3a8bd6;
+        --background-color: #f7f7f8;
+        --text-color: #222222;
+        --link-color: #3a8bd6;
+      }
 
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
 
-        a:hover {
-            text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
 
-        header,
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
+      header,
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+      }
 
-        header {
-            padding: 2rem 1rem;
-        }
+      header {
+        padding: 2rem 1rem;
+      }
 
-        nav {
-            background-color: var(--secondary-color);
-            padding: 0.5rem;
-        }
+      nav {
+        background-color: var(--secondary-color);
+        padding: 0.5rem;
+      }
 
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        font-weight: bold;
+      }
+
+      main {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        flex: 1;
+      }
+
+      section {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+      }
+
+      .contact-info {
+        background-color: var(--background-color);
+      }
+
+      .skills {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .skills li {
+        padding: 0.3rem 0.6rem;
+        border-radius: 3px;
+        transition: transform 0.2s;
+        background-color: var(--secondary-color);
+      }
+
+      .skills li:hover {
+        transform: translateY(-3px);
+      }
+
+      .skills li a {
+        color: white;
+      }
+
+      .highlight {
+        color: var(--secondary-color);
+        font-weight: bold;
+      }
+
+      .project {
+        margin-bottom: 1rem;
+      }
+
+      .project h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        padding: 1rem;
+        margin-top: auto;
+      }
+
+      .social-links a {
+        margin: 0 10px;
+        font-size: 1.5em;
+        transition: opacity 0.2s;
+      }
+
+      .social-links a:hover {
+        opacity: 0.8;
+      }
+
+      .social-links .fa-github {
+        color: #333333;
+      }
+
+      .social-links .fa-linkedin {
+        color: #0077b5;
+      }
+
+      .social-links .fa-twitter {
+        color: #1da1f2;
+      }
+
+      .social-links .fa-blog {
+        color: #ff5722;
+      }
+
+      @media (max-width: 600px) {
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
+          flex-direction: column;
+          align-items: center;
         }
 
         nav ul li {
-            margin: 0 1rem;
+          margin: 0.5rem 0;
         }
-
-        nav ul li a {
-            color: white;
-            font-weight: bold;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            flex: 1;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .contact-info {
-            background-color: var(--background-color);
-        }
-
-        .skills {
-            padding: 0;
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skills li {
-            padding: 0.3rem 0.6rem;
-            border-radius: 3px;
-            transition: transform 0.2s;
-            background-color: var(--secondary-color);
-        }
-
-        .skills li:hover {
-            transform: translateY(-3px);
-        }
-
-        .skills li a {
-            color: white;
-        }
-
-        .highlight {
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-
-        .project {
-            margin-bottom: 1rem;
-        }
-
-        .project h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            padding: 1rem;
-            margin-top: auto;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: opacity 0.2s;
-        }
-
-        .social-links a:hover {
-            opacity: 0.8;
-        }
-
-        .social-links .fa-github {
-            color: #333333;
-        }
-
-        .social-links .fa-linkedin {
-            color: #0077B5;
-        }
-
-        .social-links .fa-twitter {
-            color: #1DA1F2;
-        }
-
-        .social-links .fa-blog {
-            color: #FF5722;
-        }
-
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 0.5rem 0;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Suman Shrestha - Leading Laravel Developer in Nepal</h1>
-        <p>Full-Stack Web Developer & Laravel Specialist</p>
+      <h1>Suman Shrestha - Leading Laravel Developer in Nepal</h1>
+      <p>Full-Stack Web Developer & Laravel Specialist</p>
     </header>
 
     <main>
-        <section id="about" class="about-me">
-            <h2>About Me</h2>
-            <p>👋 Hello! I'm Suman, a <span class="highlight">passionate full-stack web developer</span> with over 7
-                years of experience crafting robust, scalable, and user-friendly web applications.</p>
-            <p>🚀 My expertise lies in leveraging cutting-edge technologies like <span class="highlight">Laravel,
-                    Livewire, and FilamentPHP</span> to build efficient and maintainable solutions. I thrive on turning
-                complex problems into simple, beautiful, and intuitive designs.</p>
-            <p>💡 What sets me apart:</p>
-            <ul>
-                <li><strong>Full-Stack Proficiency:</strong> From database design to front-end finesse, I handle it all.
-                </li>
-                <li><strong>Problem-Solving Skills:</strong> I don't just code; I architect solutions that drive
-                    business growth.</li>
-                <li><strong>Continuous Learner:</strong> In this ever-evolving tech landscape, I stay ahead of the
-                    curve.</li>
-                <li><strong>Team Player:</strong> I believe great software is built by great teams, and I excel in
-                    collaborative environments.</li>
+      <section id="about" class="about-me">
+        <h2>About Me</h2>
+        <p>
+          👋 Hello! I'm Suman, a
+          <span class="highlight">passionate full-stack web developer</span>
+          with over 7 years of experience crafting robust, scalable, and
+          user-friendly web applications.
+        </p>
+        <p>
+          🚀 My expertise lies in leveraging cutting-edge technologies like
+          <span class="highlight">Laravel, Livewire, and FilamentPHP</span> to
+          build efficient and maintainable solutions. I thrive on turning
+          complex problems into simple, beautiful, and intuitive designs.
+        </p>
+        <p>💡 What sets me apart:</p>
+        <ul>
+          <li>
+            <strong>Full-Stack Proficiency:</strong> From database design to
+            front-end finesse, I handle it all.
+          </li>
+          <li>
+            <strong>Problem-Solving Skills:</strong> I don't just code; I
+            architect solutions that drive business growth.
+          </li>
+          <li>
+            <strong>Continuous Learner:</strong> In this ever-evolving tech
+            landscape, I stay ahead of the curve.
+          </li>
+          <li>
+            <strong>Team Player:</strong> I believe great software is built by
+            great teams, and I excel in collaborative environments.
+          </li>
+        </ul>
+        <p>
+          🌟 If you're looking for a developer who can transform your ideas into
+          reality, optimize your existing systems, or lead your next big
+          project, let's connect! I'm always excited to take on new challenges
+          and create impactful solutions.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li style="background-color: #ff2d20">
+            <a
+              href="https://laravel.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Laravel</a
+            >
+          </li>
+          <li style="background-color: #4e56a6">
+            <a
+              href="https://laravel-livewire.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Livewire</a
+            >
+          </li>
+          <li style="background-color: #00b5d8">
+            <a
+              href="https://filamentphp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >FilamentPHP</a
+            >
+          </li>
+          <li style="background-color: #77c1d2">
+            <a
+              href="https://alpinejs.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >AlpineJs</a
+            >
+          </li>
+          <li style="background-color: #38b2ac">
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TailwindCSS</a
+            >
+          </li>
+          <li style="background-color: #61dafb">
+            <a
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >React</a
+            >
+          </li>
+          <li style="background-color: #41b883">
+            <a
+              href="https://vuejs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Vue</a
+            >
+          </li>
+          <li style="background-color: #131722">
+            <a
+              href="https://www.tradingview.com/lightweight-charts/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TradingView Library</a
+            >
+          </li>
+          <li style="background-color: #f80000">
+            <a
+              href="https://www.oracle.com/database/technologies/appdev/plsql.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >PL/SQL (Oracle)</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section id="laravel-expertise">
+        <h2>Laravel Development Expertise</h2>
+        <p>
+          As a top Laravel developer in Nepal, I specialize in creating robust,
+          scalable web applications using the Laravel framework. My expertise
+          includes:
+        </p>
+        <ul>
+          <li>Custom Laravel application development</li>
+          <li>API development with Laravel</li>
+          <li>Laravel Livewire for dynamic interfaces</li>
+          <li>FilamentPHP for rapid application development</li>
+          <li>Laravel performance optimization</li>
+          <li>Integration of Laravel with various front-end technologies</li>
+        </ul>
+        <p>
+          With over 7 years of experience in Laravel development, I've helped
+          numerous businesses in Nepal and internationally to build powerful web
+          solutions.
+        </p>
+      </section>
+
+      <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+          <h3>PL/SQL (Oracle) Developer</h3>
+          <p>
+            With over 5 years of experience in the software industry, I have a
+            strong understanding of PL/SQL programming and Oracle Database. I am
+            skilled in developing and maintaining PL/SQL applications, with a
+            proven track record of delivering high-quality software.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Web Developer</h3>
+          <p>
+            I specialize in building applications using Laravel, a popular and
+            powerful PHP framework. With my expertise in Laravel development, I
+            can create robust and scalable applications that meet specific
+            requirements.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Technical Blogger</h3>
+          <p>
+            In my blog, I write about a variety of topics, including programming
+            languages, frameworks, and tools. I also share code snippets and
+            tutorials to help other developers learn and grow.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>HilifeFoods</h3>
+            <p>
+              A comprehensive e-commerce platform for food delivery, built with
+              Laravel and Vue.js.
+            </p>
+            <ul class="project-tech">
+              <li class="tech-laravel">Laravel</li>
+              <li class="tech-vue">Vue.js</li>
+              <li class="tech-mysql">MySQL</li>
             </ul>
-            <p>🌟 If you're looking for a developer who can transform your ideas into reality, optimize your existing
-                systems, or lead your next big project, let's connect! I'm always excited to take on new challenges and
-                create impactful solutions.</p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li style="background-color: #FF2D20;"><a href="https://laravel.com/" target="_blank"
-                        rel="noopener noreferrer">Laravel</a></li>
-                <li style="background-color: #4E56A6;"><a href="https://laravel-livewire.com/" target="_blank"
-                        rel="noopener noreferrer">Livewire</a></li>
-                <li style="background-color: #00B5D8;"><a href="https://filamentphp.com/" target="_blank"
-                        rel="noopener noreferrer">FilamentPHP</a></li>
-                <li style="background-color: #77C1D2;"><a href="https://alpinejs.dev/" target="_blank"
-                        rel="noopener noreferrer">AlpineJs</a></li>
-                <li style="background-color: #38B2AC;"><a href="https://tailwindcss.com/" target="_blank"
-                        rel="noopener noreferrer">TailwindCSS</a></li>
-                <li style="background-color: #61DAFB;"><a href="https://reactjs.org/" target="_blank"
-                        rel="noopener noreferrer">React</a></li>
-                <li style="background-color: #41B883;"><a href="https://vuejs.org/" target="_blank"
-                        rel="noopener noreferrer">Vue</a></li>
-                <li style="background-color: #131722;"><a href="https://www.tradingview.com/lightweight-charts/"
-                        target="_blank" rel="noopener noreferrer">TradingView Library</a></li>
-                <li style="background-color: #F80000;"><a
-                        href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank"
-                        rel="noopener noreferrer">PL/SQL (Oracle)</a></li>
+          </div>
+          <div class="project-card">
+            <h3>Education Management System</h3>
+            <p>
+              A robust system to streamline educational institution processes,
+              using Laravel and Livewire.
+            </p>
+            <ul class="project-tech">
+              <li class="tech-laravel">Laravel</li>
+              <li class="tech-livewire">Livewire</li>
+              <li class="tech-postgresql">PostgreSQL</li>
             </ul>
-        </section>
-
-        <section id="laravel-expertise">
-            <h2>Laravel Development Expertise</h2>
-            <p>As a top Laravel developer in Nepal, I specialize in creating robust, scalable web applications using the
-                Laravel framework. My expertise includes:</p>
-            <ul>
-                <li>Custom Laravel application development</li>
-                <li>API development with Laravel</li>
-                <li>Laravel Livewire for dynamic interfaces</li>
-                <li>FilamentPHP for rapid application development</li>
-                <li>Laravel performance optimization</li>
-                <li>Integration of Laravel with various front-end technologies</li>
+          </div>
+          <div class="project-card">
+            <h3>Nepse.Site</h3>
+            <p>
+              Real-time stock market data visualization for Nepal Stock
+              Exchange, using TradingView library.
+            </p>
+            <ul class="project-tech">
+              <li class="tech-js">JavaScript</li>
+              <li class="tech-tradingview">TradingView</li>
+              <li class="tech-api">API Integration</li>
             </ul>
-            <p>With over 7 years of experience in Laravel development, I've helped numerous businesses in Nepal and
-                internationally to build powerful web solutions.</p>
-        </section>
+          </div>
+          <div class="project-card">
+            <h3>Smark Karobaar</h3>
+            <p>
+              Innovative financial management app with Laravel and React,
+              focusing on user-friendly analytics.
+            </p>
+            <ul class="project-tech">
+              <li class="tech-laravel">Laravel</li>
+              <li class="tech-react">React</li>
+              <li class="tech-chartjs">Chart.js</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>PL/SQL (Oracle) Developer</h3>
-                <p>With over 5 years of experience in the software industry, I have a strong understanding of PL/SQL
-                    programming and Oracle Database. I am skilled in developing and maintaining PL/SQL applications,
-                    with a proven track record of delivering high-quality software.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Web Developer</h3>
-                <p>I specialize in building applications using Laravel, a popular and powerful PHP framework. With my
-                    expertise in Laravel development, I can create robust and scalable applications that meet specific
-                    requirements.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Technical Blogger</h3>
-                <p>In my blog, I write about a variety of topics, including programming languages, frameworks, and
-                    tools. I also share code snippets and tutorials to help other developers learn and grow.</p>
-            </div>
-        </section>
+      <style>
+        #projects {
+          background-color: var(--background-color);
+          padding: 3rem 1rem;
+          max-width: 1200px;
+          margin: 0 auto;
+          text-align: center;
+        }
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>HilifeFoods</h3>
-                    <p>A comprehensive e-commerce platform for food delivery, built with Laravel and Vue.js.</p>
-                    <ul class="project-tech">
-                        <li>Laravel</li>
-                        <li>Vue.js</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Education Management System</h3>
-                    <p>A robust system to streamline educational institution processes, using Laravel and Livewire.</p>
-                    <ul class="project-tech">
-                        <li>Laravel</li>
-                        <li>Livewire</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Nepse.Site</h3>
-                    <p>Real-time stock market data visualization for Nepal Stock Exchange, using TradingView library.
-                    </p>
-                    <ul class="project-tech">
-                        <li>JavaScript</li>
-                        <li>TradingView</li>
-                        <li>API Integration</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Smark Karobaar</h3>
-                    <p>Innovative financial management app with Laravel and React, focusing on user-friendly analytics.
-                    </p>
-                    <ul class="project-tech">
-                        <li>Laravel</li>
-                        <li>React</li>
-                        <li>Chart.js</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        #projects h2 {
+          color: var(--primary-color);
+          border-bottom: 2px solid var(--secondary-color);
+          padding-bottom: 0.5rem;
+          margin-bottom: 2rem;
+          font-size: 2.5rem;
+        }
 
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="testimonial">
-                <p>"Suman's expertise in Laravel transformed our web application. His ability to solve complex problems with ease is truly commendable. We couldn't be happier with the results!"</p>
-                <p><strong>- Ram Thapa, CEO of TechNepal</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"Working with Suman was a game-changer for our project. His dedication, skill, and innovative approach ensured that our project was a huge success. Highly recommended!"</p>
-                <p><strong>- Maya Shrestha, Project Manager at Web Innovations</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"Suman's knowledge of Laravel and his attention to detail are exceptional. He delivered a robust and scalable solution that exceeded our expectations. We look forward to working with him again."</p>
-                <p><strong>- Bikash Gurung, CTO of eCommerce Solutions Nepal</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"Suman is a top-notch developer. His work on our application was flawless, and his ability to understand our requirements and deliver on time was impressive. We highly recommend him!"</p>
-                <p><strong>- Sunita Rai, Founder of StartUp Nepal</strong></p>
-            </div>
-        </section>
-        
-        <style>
-            #testimonials {
-                background-color: var(--background-color);
-                padding: 2rem 1rem;
-                max-width: 800px;
-                margin: 0 auto;
-                text-align: center;
-            }
-        
-            #testimonials h2 {
-                color: var(--primary-color);
-                border-bottom: 2px solid var(--secondary-color);
-                padding-bottom: 0.5rem;
-                margin-bottom: 1.5rem;
-            }
-        
-            .testimonial {
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-        
-            .testimonial p {
-                color: var(--text-color);
-                margin-bottom: 0.5rem;
-            }
-        
-            .testimonial strong {
-                color: var(--secondary-color);
-            }
-        </style>
-        
+        .projects-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        }
 
-        <section id="contact" class="contact-info">
-            <h2>Contact Information</h2>
-            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:summonshr@gmail.com">summonshr@gmail.com</a></p>
-            <p><i class="fas fa-phone"></i> Phone: <a href="tel:+9779841145614">+977 9841145614</a></p>
-            <p><i class="fas fa-phone-alt"></i> Alternative Phone: <a href="tel:+918850852489">+91 8850852489</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> Location: Kathmandu, Nepal</p>
-            <div class="social-links">
-                <a href="https://github.com/summonshr" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/suman-shresth" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/sumfreelancer" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="https://blog.sumanshresth.com.np" target="_blank" rel="noopener noreferrer"><i
-                        class="fas fa-blog"></i></a>
-            </div>
-        </section>
+        .project-card {
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 1.5rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+          color: var(--primary-color);
+          margin-bottom: 1rem;
+          font-size: 1.75rem;
+        }
+
+        .project-card p {
+          color: var(--text-color);
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
+        }
+
+        .project-tech {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+        }
+
+        .project-tech li {
+          border-radius: 5px;
+          padding: 0.25rem 0.5rem;
+          font-size: 0.875rem;
+        }
+
+        .tech-laravel {
+          background-color: #ff2d20;
+          color: white;
+        }
+
+        .tech-vue {
+          background-color: #41b883;
+          color: white;
+        }
+
+        .tech-mysql {
+          background-color: #00758f;
+          color: white;
+        }
+
+        .tech-livewire {
+          background-color: #4cc3d9;
+          color: white;
+        }
+
+        .tech-postgresql {
+          background-color: #336791;
+          color: white;
+        }
+
+        .tech-js {
+          background-color: #f7df1e;
+          color: black;
+        }
+
+        .tech-tradingview {
+          background-color: #2e86ab;
+          color: white;
+        }
+
+        .tech-api {
+          background-color: #ff4500;
+          color: white;
+        }
+
+        .tech-react {
+          background-color: #61dafb;
+          color: black;
+        }
+
+        .tech-chartjs {
+          background-color: #ff6384;
+          color: white;
+        }
+      </style>
+
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-slide">
+            <p>
+              "Suman's expertise in Laravel transformed our web application. His
+              ability to solve complex problems with ease is truly commendable.
+              We couldn't be happier with the results!"
+            </p>
+            <p><strong>- Ram Thapa, CEO of TechNepal</strong></p>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "Working with Suman was a game-changer for our project. His
+              dedication, skill, and innovative approach ensured that our
+              project was a huge success. Highly recommended!"
+            </p>
+            <p>
+              <strong
+                >- Maya Shrestha, Project Manager at Web Innovations</strong
+              >
+            </p>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "Suman's knowledge of Laravel and his attention to detail are
+              exceptional. He delivered a robust and scalable solution that
+              exceeded our expectations. We look forward to working with him
+              again."
+            </p>
+            <p>
+              <strong>- Bikash Gurung, CTO of eCommerce Solutions Nepal</strong>
+            </p>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "Suman is a top-notch developer. His work on our application was
+              flawless, and his ability to understand our requirements and
+              deliver on time was impressive. We highly recommend him!"
+            </p>
+            <p><strong>- Sunita Rai, Founder of StartUp Nepal</strong></p>
+          </div>
+        </div>
+        <div class="testimonial-nav">
+          <button class="prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <style>
+        #testimonials {
+          background-color: var(--background-color);
+          padding: 2rem 1rem;
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: center;
+          position: relative;
+        }
+
+        #testimonials h2 {
+          color: var(--primary-color);
+          border-bottom: 2px solid var(--secondary-color);
+          padding-bottom: 0.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .testimonial-slider {
+          overflow: hidden;
+          position: relative;
+        }
+
+        .testimonial-slide {
+          display: none;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .testimonial-slide.active {
+          display: block;
+        }
+
+        .testimonial-slide p {
+          color: var(--text-color);
+          margin-bottom: 0.5rem;
+        }
+
+        .testimonial-slide strong {
+          color: var(--secondary-color);
+        }
+
+        .testimonial-nav {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+        .testimonial-nav button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: var(--primary-color);
+        }
+
+        .testimonial-nav button:hover {
+          color: var(--secondary-color);
+        }
+      </style>
+
+      <script>
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+          });
+        }
+
+        prevButton.addEventListener('click', () => {
+          currentIndex =
+            currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
+          showSlide(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+          currentIndex =
+            currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+          showSlide(currentIndex);
+        });
+
+        // Initialize the slider
+        showSlide(currentIndex);
+      </script>
+
+      <section id="contact" class="contact-info">
+        <h2>Contact Information</h2>
+        <p>
+          <i class="fas fa-envelope"></i> Email:
+          <a href="mailto:summonshr@gmail.com">summonshr@gmail.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i> Phone:
+          <a href="tel:+9779841145614">+977 9841145614</a>
+        </p>
+        <p>
+          <i class="fas fa-phone-alt"></i> Alternative Phone:
+          <a href="tel:+918850852489">+91 8850852489</a>
+        </p>
+        <p><i class="fas fa-map-marker-alt"></i> Location: Kathmandu, Nepal</p>
+        <div class="social-links">
+          <a
+            href="https://github.com/summonshr"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/suman-shresth"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/sumfreelancer"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://blog.sumanshresth.com.np"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fas fa-blog"></i
+          ></a>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Suman Shrestha. All rights reserved.</p>
+      <p>&copy; 2024 Suman Shrestha. All rights reserved.</p>
     </footer>
-</body>
-<script type="application/ld+json">
+  </body>
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
@@ -426,6 +761,5 @@
         "https://twitter.com/sumfreelancer"
       ]
     }
-    </script>
-
+  </script>
 </html>
