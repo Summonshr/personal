@@ -3,87 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suman Shrestha - Web Developer</title>
+    <title>Suman Shrestha - Full-Stack Web Developer</title>
+    <meta name="description" content="Suman Shrestha is a passionate full-stack web developer with over 7 years of experience in Laravel, Livewire, and FilamentPHP.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
+
         header {
-            background-color: #2c3e50;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem 1rem;
         }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         main {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
             flex: 1;
         }
+
         section {
             margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
-            color: #2c3e50;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
         }
+
         .contact-info {
-            background-color: #ecf0f1;
-            padding: 1rem;
-            border-radius: 5px;
+            background-color: var(--background-color);
         }
+
         .skills {
             padding: 0;
             list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
+
         .skills li {
-            display: inline-block;
             padding: 0.3rem 0.6rem;
-            margin: 0.2rem;
             border-radius: 3px;
             transition: transform 0.2s;
         }
+
         .skills li:hover {
             transform: translateY(-3px);
         }
+
         .skills li a {
             color: white;
             text-decoration: none;
         }
+
         .skills li a:hover {
             text-decoration: underline;
         }
-        .laravel { background-color: #FF2D20; }
-        .livewire { background-color: #4E56A6; }
-        .filament { background-color: #00B5D8; }
-        .alpine { background-color: #77C1D2; }
-        .tailwind { background-color: #38B2AC; }
-        .react { background-color: #61DAFB; }
-        .vue { background-color: #41B883; }
-        .tradingview { background-color: #131722; }
-        .plsql { background-color: #F80000; }
+
+        .highlight {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .project {
+            margin-bottom: 1rem;
+        }
+
+        .project h3 {
+            margin-bottom: 0.5rem;
+        }
+
         footer {
-            background-color: #2c3e50;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
             padding: 1rem;
             margin-top: auto;
         }
-        .highlight {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-        .about-me {
-            background-color: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
@@ -93,15 +146,17 @@
         <p>Full-Stack Web Developer & Problem Solver</p>
     </header>
     
-    <main>
-        <section id="contact" class="contact-info">
-            <h2>Contact Information</h2>
-            <p>Email: summonshr@gmail.com</p>
-            <p>Phone: +9779841145614</p>
-            <p>Alternative Phone: +918850852489</p>
-            <p>Location: Kathmandu, Nepal</p>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
+    <main>
         <section id="about" class="about-me">
             <h2>About Me</h2>
             <p>👋 Hello! I'm Suman, a <span class="highlight">passionate full-stack web developer</span> with over 7 years of experience crafting robust, scalable, and user-friendly web applications.</p>
@@ -119,38 +174,65 @@
         <section id="skills">
             <h2>Skills</h2>
             <ul class="skills">
-                <li class="laravel"><a href="https://laravel.com/" target="_blank">Laravel</a></li>
-                <li class="livewire"><a href="https://laravel-livewire.com/" target="_blank">Livewire</a></li>
-                <li class="filament"><a href="https://filamentphp.com/" target="_blank">FilamentPHP</a></li>
-                <li class="alpine"><a href="https://alpinejs.dev/" target="_blank">AlpineJs</a></li>
-                <li class="tailwind"><a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a></li>
-                <li class="react"><a href="https://reactjs.org/" target="_blank">React</a></li>
-                <li class="vue"><a href="https://vuejs.org/" target="_blank">Vue</a></li>
-                <li class="tradingview"><a href="https://www.tradingview.com/lightweight-charts/" target="_blank">TradingView Library</a></li>
-                <li class="plsql"><a href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank">PL/SQL (Oracle)</a></li>
+                <li style="background-color: #FF2D20;"><a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a></li>
+                <li style="background-color: #4E56A6;"><a href="https://laravel-livewire.com/" target="_blank" rel="noopener noreferrer">Livewire</a></li>
+                <li style="background-color: #00B5D8;"><a href="https://filamentphp.com/" target="_blank" rel="noopener noreferrer">FilamentPHP</a></li>
+                <li style="background-color: #77C1D2;"><a href="https://alpinejs.dev/" target="_blank" rel="noopener noreferrer">AlpineJs</a></li>
+                <li style="background-color: #38B2AC;"><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">TailwindCSS</a></li>
+                <li style="background-color: #61DAFB;"><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a></li>
+                <li style="background-color: #41B883;"><a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue</a></li>
+                <li style="background-color: #131722;"><a href="https://www.tradingview.com/lightweight-charts/" target="_blank" rel="noopener noreferrer">TradingView Library</a></li>
+                <li style="background-color: #F80000;"><a href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank" rel="noopener noreferrer">PL/SQL (Oracle)</a></li>
             </ul>
         </section>
 
-        <section id="what-im-doing">
-            <h2>What I'm Doing</h2>
-            <h3>PL/SQL (Oracle)</h3>
-            <p>With over 5 years of experience in the software industry, I have a strong understanding of PL/SQL programming and Oracle Database. I am skilled in developing and maintaining PL/SQL applications, with a proven track record of delivering high-quality software.</p>
-
-            <h3>Web Development</h3>
-            <p>I specialize in building applications using Laravel, a popular and powerful PHP framework. With my expertise in Laravel development, I can create robust and scalable applications that meet specific requirements.</p>
-
-            <h3>Blogging</h3>
-            <p>In my blog, I write about a variety of topics, including programming languages, frameworks, and tools. I also share code snippets and tutorials to help other developers learn and grow.</p>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>PL/SQL (Oracle) Developer</h3>
+                <p>With over 5 years of experience in the software industry, I have a strong understanding of PL/SQL programming and Oracle Database. I am skilled in developing and maintaining PL/SQL applications, with a proven track record of delivering high-quality software.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Web Developer</h3>
+                <p>I specialize in building applications using Laravel, a popular and powerful PHP framework. With my expertise in Laravel development, I can create robust and scalable applications that meet specific requirements.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Technical Blogger</h3>
+                <p>In my blog, I write about a variety of topics, including programming languages, frameworks, and tools. I also share code snippets and tutorials to help other developers learn and grow.</p>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>Past Projects</h2>
-            <ul>
-                <li>HilifeFoods</li>
-                <li>Education Management System</li>
-                <li>Nepse.Site</li>
-                <li>Smark Karobaar</li>
-            </ul>
+            <h2>Featured Projects</h2>
+            <div class="project">
+                <h3>HilifeFoods</h3>
+                <p>A comprehensive e-commerce platform for a food delivery service, built with Laravel and Vue.js.</p>
+            </div>
+            <div class="project">
+                <h3>Education Management System</h3>
+                <p>A robust system to streamline educational institution processes, developed using Laravel and Livewire.</p>
+            </div>
+            <div class="project">
+                <h3>Nepse.Site</h3>
+                <p>A real-time stock market data visualization tool for the Nepal Stock Exchange, utilizing the TradingView library.</p>
+            </div>
+            <div class="project">
+                <h3>Smark Karobaar</h3>
+                <p>An innovative financial management application built with Laravel and React, focusing on user-friendly interfaces and powerful analytics.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-info">
+            <h2>Contact Information</h2>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:summonshr@gmail.com">summonshr@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> Phone: <a href="tel:+9779841145614">+977 9841145614</a></p>
+            <p><i class="fas fa-phone-alt"></i> Alternative Phone: <a href="tel:+918850852489">+91 8850852489</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Location: Kathmandu, Nepal</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            </div>
         </section>
     </main>
 
