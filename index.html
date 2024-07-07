@@ -1,226 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suman Shrestha - Full-Stack Web Developer</title>
-    <meta name="description" content="Suman Shrestha is a passionate full-stack web developer with over 7 years of experience in Laravel, Livewire, and FilamentPHP.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Suman Shrestha | Laravel Developer in Nepal</title>
+        <meta name="description"
+            content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications.">
+        <meta name="keywords" content="Laravel Developer, Nepal, Web Development, PHP, Suman Shrestha">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.sumanshresth.com.np/">
+        <meta property="og:title" content="Suman Shrestha | Top Laravel Developer in Nepal">
+        <meta property="og:description"
+            content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications.">
+
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://www.sumanshresth.com.np/">
+        <meta property="twitter:title" content="Suman Shrestha | Top Laravel Developer in Nepal">
+        <meta property="twitter:description"
+            content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications.">
+
+    </head>
     <style>
-     :root {
-    --primary-color: #0d1017;
-    --secondary-color: #3a8bd6;
-    --background-color: #f7f7f8;
-    --text-color: #222222;
-    --link-color: #3a8bd6;
-}
+        :root {
+            --primary-color: #0d1017;
+            --secondary-color: #3a8bd6;
+            --background-color: #f7f7f8;
+            --text-color: #222222;
+            --link-color: #3a8bd6;
+        }
 
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-a {
-    color: var(--link-color);
-    text-decoration: none;
-}
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
-header, footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-}
+        header,
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
 
-header {
-    padding: 2rem 1rem;
-}
+        header {
+            padding: 2rem 1rem;
+        }
 
-nav {
-    background-color: var(--secondary-color);
-    padding: 0.5rem;
-}
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-nav ul li {
-    margin: 0 1rem;
-}
+        nav ul li {
+            margin: 0 1rem;
+        }
 
-nav ul li a {
-    color: white;
-    font-weight: bold;
-}
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+        }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    flex: 1;
-}
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            flex: 1;
+        }
 
-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-}
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
 
-.contact-info {
-    background-color: var(--background-color);
-}
+        .contact-info {
+            background-color: var(--background-color);
+        }
 
-.skills {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
+        .skills {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
 
-.skills li {
-    padding: 0.3rem 0.6rem;
-    border-radius: 3px;
-    transition: transform 0.2s;
-    background-color: var(--secondary-color);
-}
+        .skills li {
+            padding: 0.3rem 0.6rem;
+            border-radius: 3px;
+            transition: transform 0.2s;
+            background-color: var(--secondary-color);
+        }
 
-.skills li:hover {
-    transform: translateY(-3px);
-}
+        .skills li:hover {
+            transform: translateY(-3px);
+        }
 
-.skills li a {
-    color: white;
-}
+        .skills li a {
+            color: white;
+        }
 
-.highlight {
-    color: var(--secondary-color);
-    font-weight: bold;
-}
+        .highlight {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
 
-.project {
-    margin-bottom: 1rem;
-}
+        .project {
+            margin-bottom: 1rem;
+        }
 
-.project h3 {
-    margin-bottom: 0.5rem;
-}
+        .project h3 {
+            margin-bottom: 0.5rem;
+        }
 
-footer {
-    padding: 1rem;
-    margin-top: auto;
-}
+        footer {
+            padding: 1rem;
+            margin-top: auto;
+        }
 
-.social-links a {
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: opacity 0.2s;
-}
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: opacity 0.2s;
+        }
 
-.social-links a:hover {
-    opacity: 0.8;
-}
+        .social-links a:hover {
+            opacity: 0.8;
+        }
 
-.social-links .fa-github {
-    color: #333333;
-}
+        .social-links .fa-github {
+            color: #333333;
+        }
 
-.social-links .fa-linkedin {
-    color: #0077B5;
-}
+        .social-links .fa-linkedin {
+            color: #0077B5;
+        }
 
-.social-links .fa-twitter {
-    color: #1DA1F2;
-}
+        .social-links .fa-twitter {
+            color: #1DA1F2;
+        }
 
-.social-links .fa-blog {
-    color: #FF5722;
-}
+        .social-links .fa-blog {
+            color: #FF5722;
+        }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-}
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Suman Shrestha</h1>
-        <p>Full-Stack Web Developer & Problem Solver</p>
+        <h1>Suman Shrestha - Leading Laravel Developer in Nepal</h1>
+        <p>Full-Stack Web Developer & Laravel Specialist</p>
     </header>
 
     <main>
         <section id="about" class="about-me">
             <h2>About Me</h2>
-            <p>👋 Hello! I'm Suman, a <span class="highlight">passionate full-stack web developer</span> with over 7 years of experience crafting robust, scalable, and user-friendly web applications.</p>
-            <p>🚀 My expertise lies in leveraging cutting-edge technologies like <span class="highlight">Laravel, Livewire, and FilamentPHP</span> to build efficient and maintainable solutions. I thrive on turning complex problems into simple, beautiful, and intuitive designs.</p>
+            <p>👋 Hello! I'm Suman, a <span class="highlight">passionate full-stack web developer</span> with over 7
+                years of experience crafting robust, scalable, and user-friendly web applications.</p>
+            <p>🚀 My expertise lies in leveraging cutting-edge technologies like <span class="highlight">Laravel,
+                    Livewire, and FilamentPHP</span> to build efficient and maintainable solutions. I thrive on turning
+                complex problems into simple, beautiful, and intuitive designs.</p>
             <p>💡 What sets me apart:</p>
             <ul>
-                <li><strong>Full-Stack Proficiency:</strong> From database design to front-end finesse, I handle it all.</li>
-                <li><strong>Problem-Solving Skills:</strong> I don't just code; I architect solutions that drive business growth.</li>
-                <li><strong>Continuous Learner:</strong> In this ever-evolving tech landscape, I stay ahead of the curve.</li>
-                <li><strong>Team Player:</strong> I believe great software is built by great teams, and I excel in collaborative environments.</li>
+                <li><strong>Full-Stack Proficiency:</strong> From database design to front-end finesse, I handle it all.
+                </li>
+                <li><strong>Problem-Solving Skills:</strong> I don't just code; I architect solutions that drive
+                    business growth.</li>
+                <li><strong>Continuous Learner:</strong> In this ever-evolving tech landscape, I stay ahead of the
+                    curve.</li>
+                <li><strong>Team Player:</strong> I believe great software is built by great teams, and I excel in
+                    collaborative environments.</li>
             </ul>
-            <p>🌟 If you're looking for a developer who can transform your ideas into reality, optimize your existing systems, or lead your next big project, let's connect! I'm always excited to take on new challenges and create impactful solutions.</p>
+            <p>🌟 If you're looking for a developer who can transform your ideas into reality, optimize your existing
+                systems, or lead your next big project, let's connect! I'm always excited to take on new challenges and
+                create impactful solutions.</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <ul class="skills">
-                <li style="background-color: #FF2D20;"><a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a></li>
-                <li style="background-color: #4E56A6;"><a href="https://laravel-livewire.com/" target="_blank" rel="noopener noreferrer">Livewire</a></li>
-                <li style="background-color: #00B5D8;"><a href="https://filamentphp.com/" target="_blank" rel="noopener noreferrer">FilamentPHP</a></li>
-                <li style="background-color: #77C1D2;"><a href="https://alpinejs.dev/" target="_blank" rel="noopener noreferrer">AlpineJs</a></li>
-                <li style="background-color: #38B2AC;"><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">TailwindCSS</a></li>
-                <li style="background-color: #61DAFB;"><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a></li>
-                <li style="background-color: #41B883;"><a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue</a></li>
-                <li style="background-color: #131722;"><a href="https://www.tradingview.com/lightweight-charts/" target="_blank" rel="noopener noreferrer">TradingView Library</a></li>
-                <li style="background-color: #F80000;"><a href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank" rel="noopener noreferrer">PL/SQL (Oracle)</a></li>
+                <li style="background-color: #FF2D20;"><a href="https://laravel.com/" target="_blank"
+                        rel="noopener noreferrer">Laravel</a></li>
+                <li style="background-color: #4E56A6;"><a href="https://laravel-livewire.com/" target="_blank"
+                        rel="noopener noreferrer">Livewire</a></li>
+                <li style="background-color: #00B5D8;"><a href="https://filamentphp.com/" target="_blank"
+                        rel="noopener noreferrer">FilamentPHP</a></li>
+                <li style="background-color: #77C1D2;"><a href="https://alpinejs.dev/" target="_blank"
+                        rel="noopener noreferrer">AlpineJs</a></li>
+                <li style="background-color: #38B2AC;"><a href="https://tailwindcss.com/" target="_blank"
+                        rel="noopener noreferrer">TailwindCSS</a></li>
+                <li style="background-color: #61DAFB;"><a href="https://reactjs.org/" target="_blank"
+                        rel="noopener noreferrer">React</a></li>
+                <li style="background-color: #41B883;"><a href="https://vuejs.org/" target="_blank"
+                        rel="noopener noreferrer">Vue</a></li>
+                <li style="background-color: #131722;"><a href="https://www.tradingview.com/lightweight-charts/"
+                        target="_blank" rel="noopener noreferrer">TradingView Library</a></li>
+                <li style="background-color: #F80000;"><a
+                        href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank"
+                        rel="noopener noreferrer">PL/SQL (Oracle)</a></li>
             </ul>
+        </section>
+
+        <section id="laravel-expertise">
+            <h2>Laravel Development Expertise</h2>
+            <p>As a top Laravel developer in Nepal, I specialize in creating robust, scalable web applications using the Laravel framework. My expertise includes:</p>
+            <ul>
+                <li>Custom Laravel application development</li>
+                <li>API development with Laravel</li>
+                <li>Laravel Livewire for dynamic interfaces</li>
+                <li>FilamentPHP for rapid application development</li>
+                <li>Laravel performance optimization</li>
+                <li>Integration of Laravel with various front-end technologies</li>
+            </ul>
+            <p>With over 7 years of experience in Laravel development, I've helped numerous businesses in Nepal and internationally to build powerful web solutions.</p>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
             <div class="experience-item">
                 <h3>PL/SQL (Oracle) Developer</h3>
-                <p>With over 5 years of experience in the software industry, I have a strong understanding of PL/SQL programming and Oracle Database. I am skilled in developing and maintaining PL/SQL applications, with a proven track record of delivering high-quality software.</p>
+                <p>With over 5 years of experience in the software industry, I have a strong understanding of PL/SQL
+                    programming and Oracle Database. I am skilled in developing and maintaining PL/SQL applications,
+                    with a proven track record of delivering high-quality software.</p>
             </div>
             <div class="experience-item">
                 <h3>Web Developer</h3>
-                <p>I specialize in building applications using Laravel, a popular and powerful PHP framework. With my expertise in Laravel development, I can create robust and scalable applications that meet specific requirements.</p>
+                <p>I specialize in building applications using Laravel, a popular and powerful PHP framework. With my
+                    expertise in Laravel development, I can create robust and scalable applications that meet specific
+                    requirements.</p>
             </div>
             <div class="experience-item">
                 <h3>Technical Blogger</h3>
-                <p>In my blog, I write about a variety of topics, including programming languages, frameworks, and tools. I also share code snippets and tutorials to help other developers learn and grow.</p>
+                <p>In my blog, I write about a variety of topics, including programming languages, frameworks, and
+                    tools. I also share code snippets and tutorials to help other developers learn and grow.</p>
             </div>
         </section>
 
@@ -249,7 +307,8 @@ footer {
                 </div>
                 <div class="project-card">
                     <h3>Nepse.Site</h3>
-                    <p>Real-time stock market data visualization for Nepal Stock Exchange, using TradingView library.</p>
+                    <p>Real-time stock market data visualization for Nepal Stock Exchange, using TradingView library.
+                    </p>
                     <ul class="project-tech">
                         <li>JavaScript</li>
                         <li>TradingView</li>
@@ -259,7 +318,8 @@ footer {
                 </div>
                 <div class="project-card">
                     <h3>Smark Karobaar</h3>
-                    <p>Innovative financial management app with Laravel and React, focusing on user-friendly analytics.</p>
+                    <p>Innovative financial management app with Laravel and React, focusing on user-friendly analytics.
+                    </p>
                     <ul class="project-tech">
                         <li>Laravel</li>
                         <li>React</li>
@@ -277,10 +337,14 @@ footer {
             <p><i class="fas fa-phone-alt"></i> Alternative Phone: <a href="tel:+918850852489">+91 8850852489</a></p>
             <p><i class="fas fa-map-marker-alt"></i> Location: Kathmandu, Nepal</p>
             <div class="social-links">
-                <a href="https://github.com/summonshr" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/suman-shresth" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/sumfreelancer" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                <a href="https://blog.sumanshresth.com.np" target="_blank" rel="noopener noreferrer"><i class="fas fa-blog"></i></a>
+                <a href="https://github.com/summonshr" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/suman-shresth" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/sumfreelancer" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://blog.sumanshresth.com.np" target="_blank" rel="noopener noreferrer"><i
+                        class="fas fa-blog"></i></a>
             </div>
         </section>
     </main>
@@ -289,4 +353,24 @@ footer {
         <p>&copy; 2024 Suman Shrestha. All rights reserved.</p>
     </footer>
 </body>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Suman Shrestha",
+      "jobTitle": "Laravel Developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kathmandu",
+        "addressRegion": "Bagmati",
+        "addressCountry": "Nepal"
+      },
+      "url": "https://www.sumanshresth.com.np",
+      "sameAs": [
+        "https://github.com/summonshr",
+        "https://linkedin.com/in/suman-shresth",
+        "https://twitter.com/sumfreelancer"
+      ]
+    }
+    </script>
 </html>
