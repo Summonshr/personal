@@ -1,744 +1,739 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
-    <head>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      />
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Suman Shrestha | Laravel Developer in Nepal</title>
-      <meta
-        name="description"
-        content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
-      />
-      <meta
-        name="keywords"
-        content="Laravel Developer, Nepal, Web Development, PHP, Suman Shrestha"
-      />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suman Shrestha - Laravel Developer in Nepal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suman Shrestha | Laravel Developer in Nepal</title>
+    <meta
+      name="description"
+      content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
+    />
+    <meta
+      name="keywords"
+      content="Laravel Developer, Nepal, Web Development, PHP, Suman Shrestha"
+    />
 
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.sumanshresth.com.np/" />
-      <meta
-        property="og:title"
-        content="Suman Shrestha | Top Laravel Developer in Nepal"
-      />
-      <meta
-        property="og:description"
-        content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
-      />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.sumanshresth.com.np/" />
+    <meta
+      property="og:title"
+      content="Suman Shrestha | Top Laravel Developer in Nepal"
+    />
+    <meta
+      property="og:description"
+      content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
+    />
 
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://www.sumanshresth.com.np/" />
-      <meta
-        property="twitter:title"
-        content="Suman Shrestha | Top Laravel Developer in Nepal"
-      />
-      <meta
-        property="twitter:description"
-        content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
-      />
-    </head>
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.sumanshresth.com.np/" />
+    <meta
+      property="twitter:title"
+      content="Suman Shrestha | Top Laravel Developer in Nepal"
+    />
+    <meta
+      property="twitter:description"
+      content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
+    />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
-      :root {
-        --primary-color: #0d1017;
-        --secondary-color: #3a8bd6;
-        --background-color: #f7f7f8;
-        --text-color: #222222;
-        --link-color: #3a8bd6;
-      }
-
-      body {
-        font-family: 'Roboto', Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        color: var(--text-color);
-        background-color: var(--background-color);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      a {
-        color: var(--link-color);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      header,
-      footer {
-        background-color: var(--primary-color);
-        color: white;
-        text-align: center;
-      }
-
-      header {
-        padding: 2rem 1rem;
-      }
-
-      nav {
-        background-color: var(--secondary-color);
-        padding: 0.5rem;
-      }
-
-      nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0 1rem;
-      }
-
-      nav ul li a {
-        color: white;
-        font-weight: bold;
-      }
-
-      main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-        flex: 1;
-      }
-
-      section {
-        margin-bottom: 2rem;
-        padding: 1.5rem;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        color: var(--primary-color);
-        border-bottom: 2px solid var(--secondary-color);
-        padding-bottom: 0.5rem;
-      }
-
-      .contact-info {
-        background-color: var(--background-color);
-      }
-
-      .skills {
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .skills li {
-        padding: 0.3rem 0.6rem;
-        border-radius: 3px;
-        transition: transform 0.2s;
-        background-color: var(--secondary-color);
-      }
-
-      .skills li:hover {
-        transform: translateY(-3px);
-      }
-
-      .skills li a {
-        color: white;
-      }
-
-      .highlight {
-        color: var(--secondary-color);
-        font-weight: bold;
-      }
-
-      .project {
-        margin-bottom: 1rem;
-      }
-
-      .project h3 {
-        margin-bottom: 0.5rem;
-      }
-
-      footer {
-        padding: 1rem;
-        margin-top: auto;
-      }
-
-      .social-links a {
-        margin: 0 10px;
-        font-size: 1.5em;
-        transition: opacity 0.2s;
-      }
-
-      .social-links a:hover {
-        opacity: 0.8;
-      }
-
-      .social-links .fa-github {
-        color: #333333;
-      }
-
-      .social-links .fa-linkedin {
-        color: #0077b5;
-      }
-
-      .social-links .fa-twitter {
-        color: #1da1f2;
-      }
-
-      .social-links .fa-blog {
-        color: #ff5722;
-      }
-
-      @media (max-width: 600px) {
-        nav ul {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        nav ul li {
-          margin: 0.5rem 0;
-        }
+      [x-cloak] {
+        display: none !important;
       }
     </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              claude: {
+                light: '#E8F3FF',
+                DEFAULT: '#0F70E6',
+                dark: '#0A4B9E',
+              },
+            },
+          },
+        },
+      };
+    </script>
   </head>
-
-  <body>
-    <header>
-      <h1>Suman Shrestha - Laravel Developer in Nepal</h1>
-      <p>Full-Stack Web Developer & Laravel Specialist</p>
-    </header>
-
-    <main>
-      <section id="about" class="about-me">
-        <h2>About Me</h2>
-        <p>
-          👋 Hello! I'm Suman, a
-          <span class="highlight">passionate full-stack web developer</span>
-          with over 7 years of experience crafting robust, scalable, and
-          user-friendly web applications.
+  <body class="bg-claude-light font-sans text-gray-800">
+    <div
+      x-data="{ activeTab: 'about' }"
+      class="container mx-auto p-4 max-w-6xl"
+      x-cloak
+    >
+      <header class="text-center mb-12 animate-fade-in-down">
+        <h1 class="text-5xl font-bold text-claude-dark mb-2">Suman Shrestha</h1>
+        <p class="text-2xl text-claude mb-1">Laravel Developer in Nepal</p>
+        <p class="text-xl text-gray-600">
+          Full-Stack Web Developer & Laravel Specialist
         </p>
-        <p>
-          🚀 My expertise lies in leveraging cutting-edge technologies like
-          <span class="highlight">Laravel, Livewire, and FilamentPHP</span> to
-          build efficient and maintainable solutions. I thrive on turning
-          complex problems into simple, beautiful, and intuitive designs.
-        </p>
-        <p>💡 What sets me apart:</p>
-        <ul>
-          <li>
-            <strong>Full-Stack Proficiency:</strong> From database design to
-            front-end finesse, I handle it all.
-          </li>
-          <li>
-            <strong>Problem-Solving Skills:</strong> I don't just code; I
-            architect solutions that drive business growth.
-          </li>
-          <li>
-            <strong>Continuous Learner:</strong> In this ever-evolving tech
-            landscape, I stay ahead of the curve.
-          </li>
-          <li>
-            <strong>Team Player:</strong> I believe great software is built by
-            great teams, and I excel in collaborative environments.
-          </li>
-        </ul>
-        <p>
-          🌟 If you're looking for a developer who can transform your ideas into
-          reality, optimize your existing systems, or lead your next big
-          project, let's connect! I'm always excited to take on new challenges
-          and create impactful solutions.
-        </p>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills">
-          <li style="background-color: #ff2d20">
-            <a
-              href="https://laravel.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Laravel</a
-            >
-          </li>
-          <li style="background-color: #4e56a6">
-            <a
-              href="https://laravel-livewire.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Livewire</a
-            >
-          </li>
-          <li style="background-color: #00b5d8">
-            <a
-              href="https://filamentphp.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >FilamentPHP</a
-            >
-          </li>
-          <li style="background-color: #77c1d2">
-            <a
-              href="https://alpinejs.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >AlpineJs</a
-            >
-          </li>
-          <li style="background-color: #38b2ac">
-            <a
-              href="https://tailwindcss.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >TailwindCSS</a
-            >
-          </li>
-          <li style="background-color: #61dafb">
-            <a
-              href="https://reactjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >React</a
-            >
-          </li>
-          <li style="background-color: #41b883">
-            <a
-              href="https://vuejs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Vue</a
-            >
-          </li>
-          <li style="background-color: #131722">
-            <a
-              href="https://www.tradingview.com/lightweight-charts/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >TradingView Library</a
-            >
-          </li>
-          <li style="background-color: #f80000">
-            <a
-              href="https://www.oracle.com/database/technologies/appdev/plsql.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >PL/SQL (Oracle)</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <section id="laravel-expertise">
-        <h2>Laravel Development Expertise</h2>
-        <p>
-          As a top Laravel developer in Nepal, I specialize in creating robust,
-          scalable web applications using the Laravel framework. My expertise
-          includes:
-        </p>
-        <ul>
-          <li>Custom Laravel application development</li>
-          <li>API development with Laravel</li>
-          <li>Laravel Livewire for dynamic interfaces</li>
-          <li>FilamentPHP for rapid application development</li>
-          <li>Laravel performance optimization</li>
-          <li>Integration of Laravel with various front-end technologies</li>
-        </ul>
-        <p>
-          With over 7 years of experience in Laravel development, I've helped
-          numerous businesses in Nepal and internationally to build powerful web
-          solutions.
-        </p>
-      </section>
-
-      <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="experience-item">
-          <h3>PL/SQL (Oracle) Developer</h3>
-          <p>
-            With over 5 years of experience in the software industry, I have a
-            strong understanding of PL/SQL programming and Oracle Database. I am
-            skilled in developing and maintaining PL/SQL applications, with a
-            proven track record of delivering high-quality software.
-          </p>
-        </div>
-        <div class="experience-item">
-          <h3>Web Developer</h3>
-          <p>
-            I specialize in building applications using Laravel, a popular and
-            powerful PHP framework. With my expertise in Laravel development, I
-            can create robust and scalable applications that meet specific
-            requirements.
-          </p>
-        </div>
-        <div class="experience-item">
-          <h3>Technical Blogger</h3>
-          <p>
-            In my blog, I write about a variety of topics, including programming
-            languages, frameworks, and tools. I also share code snippets and
-            tutorials to help other developers learn and grow.
-          </p>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>HilifeFoods</h3>
-            <p>
-              A comprehensive e-commerce platform for food delivery, built with
-              Laravel and Vue.js.
-            </p>
-            <ul class="project-tech">
-              <li class="tech-laravel">Laravel</li>
-              <li class="tech-vue">Vue.js</li>
-              <li class="tech-mysql">MySQL</li>
-            </ul>
-          </div>
-          <div class="project-card">
-            <h3>Education Management System</h3>
-            <p>
-              A robust system to streamline educational institution processes,
-              using Laravel and Livewire.
-            </p>
-            <ul class="project-tech">
-              <li class="tech-laravel">Laravel</li>
-              <li class="tech-livewire">Livewire</li>
-              <li class="tech-postgresql">PostgreSQL</li>
-            </ul>
-          </div>
-          <div class="project-card">
-            <h3>Nepse.Site</h3>
-            <p>
-              Real-time stock market data visualization for Nepal Stock
-              Exchange, using TradingView library.
-            </p>
-            <ul class="project-tech">
-              <li class="tech-js">JavaScript</li>
-              <li class="tech-tradingview">TradingView</li>
-              <li class="tech-api">API Integration</li>
-            </ul>
-          </div>
-          <div class="project-card">
-            <h3>Smark Karobaar</h3>
-            <p>
-              Innovative financial management app with Laravel and React,
-              focusing on user-friendly analytics.
-            </p>
-            <ul class="project-tech">
-              <li class="tech-laravel">Laravel</li>
-              <li class="tech-react">React</li>
-              <li class="tech-chartjs">Chart.js</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <style>
-        #projects {
-          background-color: var(--background-color);
-          padding: 3rem 1rem;
-          max-width: 1200px;
-          text-align: center;
-        }
-
-        #projects h2 {
-          color: var(--primary-color);
-          border-bottom: 2px solid var(--secondary-color);
-          padding-bottom: 0.5rem;
-          margin-bottom: 2rem;
-          font-size: 2.5rem;
-        }
-
-        .projects-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 2rem;
-        }
-
-        .project-card {
-          background-color: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 1.5rem;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card h3 {
-          color: var(--primary-color);
-          margin-bottom: 1rem;
-          font-size: 1.75rem;
-        }
-
-        .project-card p {
-          color: var(--text-color);
-          margin-bottom: 1.5rem;
-          font-size: 1rem;
-        }
-
-        .project-tech {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          gap: 0.5rem;
-          flex-wrap: wrap;
-        }
-
-        .project-tech li {
-          border-radius: 5px;
-          padding: 0.25rem 0.5rem;
-          font-size: 0.875rem;
-        }
-
-        .tech-laravel {
-          background-color: #ff2d20;
-          color: white;
-        }
-
-        .tech-vue {
-          background-color: #41b883;
-          color: white;
-        }
-
-        .tech-mysql {
-          background-color: #00758f;
-          color: white;
-        }
-
-        .tech-livewire {
-          background-color: #4cc3d9;
-          color: white;
-        }
-
-        .tech-postgresql {
-          background-color: #336791;
-          color: white;
-        }
-
-        .tech-js {
-          background-color: #f7df1e;
-          color: black;
-        }
-
-        .tech-tradingview {
-          background-color: #2e86ab;
-          color: white;
-        }
-
-        .tech-api {
-          background-color: #ff4500;
-          color: white;
-        }
-
-        .tech-react {
-          background-color: #61dafb;
-          color: black;
-        }
-
-        .tech-chartjs {
-          background-color: #ff6384;
-          color: white;
-        }
-      </style>
-
-      <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial-slide">
-            <p>
-              "Suman's expertise in Laravel transformed our web application. His
-              ability to solve complex problems with ease is truly commendable.
-              We couldn't be happier with the results!"
-            </p>
-            <p><strong>- Ram Thapa, CEO of TechNepal</strong></p>
-          </div>
-          <div class="testimonial-slide">
-            <p>
-              "Working with Suman was a game-changer for our project. His
-              dedication, skill, and innovative approach ensured that our
-              project was a huge success. Highly recommended!"
-            </p>
-            <p>
-              <strong
-                >- Maya Shrestha, Project Manager at Web Innovations</strong
-              >
-            </p>
-          </div>
-          <div class="testimonial-slide">
-            <p>
-              "Suman's knowledge of Laravel and his attention to detail are
-              exceptional. He delivered a robust and scalable solution that
-              exceeded our expectations. We look forward to working with him
-              again."
-            </p>
-            <p>
-              <strong>- Bikash Gurung, CTO of eCommerce Solutions Nepal</strong>
-            </p>
-          </div>
-          <div class="testimonial-slide">
-            <p>
-              "Suman is a top-notch developer. His work on our application was
-              flawless, and his ability to understand our requirements and
-              deliver on time was impressive. We highly recommend him!"
-            </p>
-            <p><strong>- Sunita Rai, Founder of StartUp Nepal</strong></p>
-          </div>
-        </div>
-        <div class="testimonial-nav">
-          <button class="prev"><i class="fas fa-chevron-left"></i></button>
-          <button class="next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </section>
-
-      <style>
-        #testimonials {
-          background-color: var(--background-color);
-          padding: 2rem 1rem;
-          max-width: 800px;
-          text-align: center;
-          position: relative;
-        }
-
-        #testimonials h2 {
-          color: var(--primary-color);
-          border-bottom: 2px solid var(--secondary-color);
-          padding-bottom: 0.5rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .testimonial-slider {
-          overflow: hidden;
-          position: relative;
-        }
-
-        .testimonial-slide {
-          display: none;
-          background-color: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 1.5rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .testimonial-slide.active {
-          display: block;
-        }
-
-        .testimonial-slide p {
-          color: var(--text-color);
-          margin-bottom: 0.5rem;
-        }
-
-        .testimonial-slide strong {
-          color: var(--secondary-color);
-        }
-
-        .testimonial-nav {
-          display: flex;
-          justify-content: center;
-          gap: 1rem;
-        }
-
-        .testimonial-nav button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          font-size: 1.5rem;
-          color: var(--primary-color);
-        }
-
-        .testimonial-nav button:hover {
-          color: var(--secondary-color);
-        }
-      </style>
-
-      <script>
-        const slides = document.querySelectorAll('.testimonial-slide');
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        let currentIndex = 0;
-
-        function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-          });
-        }
-
-        prevButton.addEventListener('click', () => {
-          currentIndex =
-            currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
-          showSlide(currentIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-          currentIndex =
-            currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
-          showSlide(currentIndex);
-        });
-
-        // Initialize the slider
-        showSlide(currentIndex);
-      </script>
-
-      <section id="contact" class="contact-info">
-        <h2>Contact Information</h2>
-        <p>
-          <i class="fas fa-envelope"></i> Email:
-          <a href="mailto:summonshr@gmail.com">summonshr@gmail.com</a>
-        </p>
-        <p>
-          <i class="fas fa-phone"></i> Phone:
-          <a href="tel:+9779841145614">+977 9841145614</a>
-        </p>
-        <p>
-          <i class="fas fa-phone-alt"></i> Alternative Phone:
-          <a href="tel:+918850852489">+91 8850852489</a>
-        </p>
-        <p><i class="fas fa-map-marker-alt"></i> Location: Kathmandu, Nepal</p>
-        <div class="social-links">
+        <div class="mt-4 flex justify-center space-x-6">
           <a
             href="https://github.com/summonshr"
             target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-github"></i
-          ></a>
+            class="text-[#333] hover:text-[#24292e] transition-colors"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github fa-2x"></i>
+          </a>
           <a
-            href="https://linkedin.com/in/suman-shresth"
+            href="https://www.linkedin.com/in/suman-shresth"
             target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-linkedin"></i
-          ></a>
+            class="text-[#0077B5] hover:text-[#006699] transition-colors"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in fa-2x"></i>
+          </a>
           <a
             href="https://twitter.com/sumfreelancer"
             target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            href="https://blog.sumanshresth.com.np"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fas fa-blog"></i
-          ></a>
+            class="text-[#1DA1F2] hover:text-[#0c85d0] transition-colors"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
         </div>
-      </section>
-    </main>
+      </header>
 
-    <footer>
-      <p>&copy; 2024 Suman Shrestha. All rights reserved.</p>
-    </footer>
+      <nav class="mb-12 bg-white shadow-lg rounded-full">
+        <ul class="flex justify-center space-x-4 p-2">
+          <li>
+            <button
+              @click="activeTab = 'about'"
+              :class="{ 'bg-claude text-white': activeTab === 'about' }"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              About
+            </button>
+          </li>
+          <li>
+            <button
+              @click="activeTab = 'skills'"
+              :class="{ 'bg-claude text-white': activeTab === 'skills' }"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              Skills
+            </button>
+          </li>
+          <li>
+            <button
+              @click="activeTab = 'experience'"
+              :class="{ 'bg-claude text-white': activeTab === 'experience' }"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              Experience
+            </button>
+          </li>
+          <li>
+            <button
+              @click="activeTab = 'projects'"
+              :class="{ 'bg-claude text-white': activeTab === 'projects' }"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              Projects
+            </button>
+          </li>
+          <li>
+            <button
+              @click="activeTab = 'testimonials'"
+              :class="{ 'bg-claude text-white': activeTab === 'testimonials' }"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              Testimonials
+            </button>
+          </li>
+          <li>
+            <button
+              @click="activeTab = 'contact'"
+              :class="{ 'bg-claude text-white': activeTab === 'contact' }"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              Contact
+            </button>
+          </li>
+          <li>
+            <button
+              @click="window.location.href='https://blog.sumanshresth.com.np'"
+              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
+            >
+              Blog
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="bg-white shadow-xl rounded-lg p-8">
+        <div x-show="activeTab === 'about'" class="animate-fade-in">
+          <h2 class="text-3xl font-bold mb-6 text-claude-dark">About Me</h2>
+          <p class="mb-4 text-lg">
+            👋 Hello! I'm Suman, a
+            <strong>passionate full-stack web developer</strong> with over 7
+            years of experience crafting robust, scalable, and user-friendly web
+            applications.
+          </p>
+          <p class="mb-6 text-lg">
+            🚀 My expertise lies in leveraging cutting-edge technologies like
+            <strong>Laravel, Livewire, and FilamentPHP</strong> to build
+            efficient and maintainable solutions. I thrive on turning complex
+            problems into simple, beautiful, and intuitive designs.
+          </p>
+          <h3 class="text-2xl font-semibold mb-4 text-claude">
+            💡 What sets me apart:
+          </h3>
+          <ul class="list-none space-y-2 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-claude mr-2"></i
+              ><strong>Full-Stack Proficiency:</strong> From database design to
+              front-end finesse, I handle it all.
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-claude mr-2"></i
+              ><strong>Problem-Solving Skills:</strong> I don't just code; I
+              architect solutions that drive business growth.
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-claude mr-2"></i
+              ><strong>Continuous Learner:</strong> In this ever-evolving tech
+              landscape, I stay ahead of the curve.
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-claude mr-2"></i
+              ><strong>Team Player:</strong> I believe great software is built
+              by great teams, and I excel in collaborative environments.
+            </li>
+          </ul>
+          <p class="text-lg">
+            🌟 If you're looking for a developer who can transform your ideas
+            into reality, optimize your existing systems, or lead your next big
+            project, let's connect! I'm always excited to take on new challenges
+            and create impactful solutions.
+          </p>
+        </div>
+
+        <div x-show="activeTab === 'skills'" class="animate-fade-in">
+          <h2 class="text-3xl font-bold mb-6 text-claude-dark">Skills</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <a
+              href="https://laravel.com"
+              target="_blank"
+              class="bg-[#FF2D20] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fab fa-laravel text-4xl mb-2"></i>
+              <div>Laravel</div>
+            </a>
+            <a
+              href="https://laravel-livewire.com"
+              target="_blank"
+              class="bg-[#FB70A9] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fas fa-bolt text-4xl mb-2"></i>
+              <div>Livewire</div>
+            </a>
+            <a
+              href="https://filamentphp.com"
+              target="_blank"
+              class="bg-[#F59E0B] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fas fa-layer-group text-4xl mb-2"></i>
+              <div>FilamentPHP</div>
+            </a>
+            <a
+              href="https://alpinejs.dev"
+              target="_blank"
+              class="bg-[#77C1D2] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fab fa-js text-4xl mb-2"></i>
+              <div>AlpineJs</div>
+            </a>
+            <a
+              href="https://tailwindcss.com"
+              target="_blank"
+              class="bg-[#38B2AC] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fab fa-css3 text-4xl mb-2"></i>
+              <div>TailwindCSS</div>
+            </a>
+            <a
+              href="https://reactjs.org"
+              target="_blank"
+              class="bg-[#61DAFB] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-black"
+            >
+              <i class="fab fa-react text-4xl mb-2"></i>
+              <div>React</div>
+            </a>
+            <a
+              href="https://vuejs.org"
+              target="_blank"
+              class="bg-[#4FC08D] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fab fa-vuejs text-4xl mb-2"></i>
+              <div>Vue</div>
+            </a>
+            <a
+              href="https://www.tradingview.com/lightweight-charts/"
+              target="_blank"
+              class="bg-[#2962FF] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fas fa-chart-line text-4xl mb-2"></i>
+              <div>TradingView Library</div>
+            </a>
+            <a
+              href="https://www.oracle.com/database/technologies/appdev/plsql.html"
+              target="_blank"
+              class="bg-[#F80000] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fas fa-database text-4xl mb-2"></i>
+              <div>PL/SQL (Oracle)</div>
+            </a>
+            <a
+              href="https://inertiajs.com"
+              target="_blank"
+              class="bg-[#9553E9] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fas fa-project-diagram text-4xl mb-2"></i>
+              <div>InertiaJS</div>
+            </a>
+            <a
+              href="https://nodejs.org"
+              target="_blank"
+              class="bg-[#339933] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fab fa-node-js text-4xl mb-2"></i>
+              <div>Node.js</div>
+            </a>
+
+            <a
+              href="https://pestphp.com"
+              target="_blank"
+              class="bg-[#00B1A9] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
+            >
+              <i class="fas fa-vial text-4xl mb-2"></i>
+              <div>Pest PHP</div>
+            </a>
+          </div>
+        </div>
+
+        <div x-show="activeTab === 'experience'" class="animate-fade-in">
+          <h2 class="text-3xl font-bold mb-6 text-claude-dark">
+            Professional Experience
+          </h2>
+          <div class="space-y-6">
+            <div
+              class="bg-gradient-to-r from-[#F80000] to-[#FF4B4B] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <div class="bg-white p-6 rounded-lg">
+                <h3
+                  class="text-2xl font-semibold text-[#F80000] mb-2 flex items-center"
+                >
+                  <i class="fas fa-database mr-2"></i>
+                  PL/SQL (Oracle) Developer
+                </h3>
+                <p class="text-lg">
+                  Over 5 years of experience in the software industry with a
+                  strong understanding of PL/SQL programming and Oracle
+                  Database.
+                </p>
+                <a
+                  href="https://www.oracle.com/database/technologies/appdev/plsql.html"
+                  target="_blank"
+                  class="inline-block mt-4 text-[#F80000] hover:underline"
+                  >Learn more about PL/SQL
+                  <i class="fas fa-arrow-right ml-1"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-[#FF2D20] to-[#FF8080] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <div class="bg-white p-6 rounded-lg">
+                <h3
+                  class="text-2xl font-semibold text-[#FF2D20] mb-2 flex items-center"
+                >
+                  <i class="fab fa-laravel mr-2"></i>
+                  Web Developer
+                </h3>
+                <p class="text-lg">
+                  Specializing in building applications using Laravel, creating
+                  robust and scalable applications that meet specific
+                  requirements.
+                </p>
+                <a
+                  href="https://laravel.com"
+                  target="_blank"
+                  class="inline-block mt-4 text-[#FF2D20] hover:underline"
+                  >Explore Laravel <i class="fas fa-arrow-right ml-1"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-[#3498db] to-[#2980b9] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <div class="bg-white p-6 rounded-lg">
+                <h3
+                  class="text-2xl font-semibold text-[#3498db] mb-2 flex items-center"
+                >
+                  <i class="fas fa-pencil-alt mr-2"></i>
+                  Technical Blogger
+                </h3>
+                <p class="text-lg">
+                  Writing about programming languages, frameworks, and tools,
+                  sharing code snippets and tutorials to help other developers
+                  learn and grow.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-[#3498db] hover:underline"
+                  >Read my blog <i class="fas fa-arrow-right ml-1"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div x-show="activeTab === 'projects'" class="animate-fade-in">
+          <h2 class="text-3xl font-bold mb-6 text-claude-dark">
+            Featured Projects
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-gradient-to-br from-[#FF6B6B] to-[#4ECDC4] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
+                <h3
+                  class="text-2xl font-semibold text-[#FF6B6B] mb-2 flex items-center"
+                >
+                  <i class="fas fa-utensils mr-2"></i>
+                  HilifeFoods
+                </h3>
+                <p class="mb-4 flex-grow">
+                  A comprehensive e-commerce platform for food delivery, built
+                  with Laravel and Vue.js.
+                </p>
+                <p class="text-sm text-gray-600 mb-4">
+                  <strong>Technologies:</strong>
+                  <span
+                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
+                    >Laravel</span
+                  >
+                  <span
+                    class="inline-block bg-[#4FC08D] text-white rounded px-2 py-1 text-xs mr-1"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="inline-block bg-[#00758F] text-white rounded px-2 py-1 text-xs"
+                    >MySQL</span
+                  >
+                </p>
+                <a
+                  href="#"
+                  class="text-[#FF6B6B] hover:underline mt-auto inline-flex items-center"
+                >
+                  View Project <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-[#A3A1FF] to-[#3A3897] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
+                <h3
+                  class="text-2xl font-semibold text-[#3A3897] mb-2 flex items-center"
+                >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Education Management System
+                </h3>
+                <p class="mb-4 flex-grow">
+                  A robust system to streamline educational institution
+                  processes, using Laravel and Livewire.
+                </p>
+                <p class="text-sm text-gray-600 mb-4">
+                  <strong>Technologies:</strong>
+                  <span
+                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
+                    >Laravel</span
+                  >
+                  <span
+                    class="inline-block bg-[#FB70A9] text-white rounded px-2 py-1 text-xs mr-1"
+                    >Livewire</span
+                  >
+                  <span
+                    class="inline-block bg-[#336791] text-white rounded px-2 py-1 text-xs"
+                    >PostgreSQL</span
+                  >
+                </p>
+                <a
+                  href="#"
+                  class="text-[#3A3897] hover:underline mt-auto inline-flex items-center"
+                >
+                  View Project <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-[#2962FF] to-[#1E88E5] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
+                <h3
+                  class="text-2xl font-semibold text-[#2962FF] mb-2 flex items-center"
+                >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Nepse.Site
+                </h3>
+                <p class="mb-4 flex-grow">
+                  Real-time stock market data visualization for Nepal Stock
+                  Exchange, using TradingView library.
+                </p>
+                <p class="text-sm text-gray-600 mb-4">
+                  <strong>Technologies:</strong>
+                  <span
+                    class="inline-block bg-[#F7DF1E] text-black rounded px-2 py-1 text-xs mr-1"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="inline-block bg-[#2962FF] text-white rounded px-2 py-1 text-xs mr-1"
+                    >TradingView</span
+                  >
+                  <span
+                    class="inline-block bg-[#61DAFB] text-black rounded px-2 py-1 text-xs"
+                    >API Integration</span
+                  >
+                </p>
+                <a
+                  href="#"
+                  class="text-[#2962FF] hover:underline mt-auto inline-flex items-center"
+                >
+                  View Project <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-[#FF9800] to-[#F57C00] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
+                <h3
+                  class="text-2xl font-semibold text-[#F57C00] mb-2 flex items-center"
+                >
+                  <i class="fas fa-money-bill-wave mr-2"></i>
+                  Smark Karobaar
+                </h3>
+                <p class="mb-4 flex-grow">
+                  Innovative financial management app with Laravel and React,
+                  focusing on user-friendly analytics.
+                </p>
+                <p class="text-sm text-gray-600 mb-4">
+                  <strong>Technologies:</strong>
+                  <span
+                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
+                    >Laravel</span
+                  >
+                  <span
+                    class="inline-block bg-[#61DAFB] text-black rounded px-2 py-1 text-xs mr-1"
+                    >React</span
+                  >
+                  <span
+                    class="inline-block bg-[#FF6384] text-white rounded px-2 py-1 text-xs"
+                    >Chart.js</span
+                  >
+                </p>
+                <a
+                  href="#"
+                  class="text-[#F57C00] hover:underline mt-auto inline-flex items-center"
+                >
+                  View Project <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          x-show="activeTab === 'testimonials'"
+          x-data="testimonialSlider()"
+          class="bg-gradient-to-r from-claude-light to-white p-8 rounded-lg shadow-lg mt-12"
+        >
+          <h2 class="text-3xl font-bold mb-6 text-claude-dark text-center">
+            What Clients Say
+          </h2>
+
+          <div class="relative overflow-hidden" style="height: 250px">
+            <div
+              class="absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out"
+              :style="`transform: translateX(-${currentIndex * 100}%)`"
+            >
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
+                >
+                  <p class="text-gray-600 italic mb-4">
+                    "Suman's expertise in Laravel transformed our web
+                    application. His ability to solve complex problems with ease
+                    is truly commendable. We couldn't be happier with the
+                    results!"
+                  </p>
+                  <p class="text-claude-dark font-semibold">
+                    - Ram Thapa, CEO of TechNepal
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
+                >
+                  <p class="text-gray-600 italic mb-4">
+                    "Working with Suman was a game-changer for our project. His
+                    dedication, skill, and innovative approach ensured that our
+                    project was a huge success. Highly recommended!"
+                  </p>
+                  <p class="text-claude-dark font-semibold">
+                    - Maya Shrestha, Project Manager at Web Innovations
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
+                >
+                  <p class="text-gray-600 italic mb-4">
+                    "Suman's knowledge of Laravel and his attention to detail
+                    are exceptional. He delivered a robust and scalable solution
+                    that exceeded our expectations. We look forward to working
+                    with him again."
+                  </p>
+                  <p class="text-claude-dark font-semibold">
+                    - Bikash Gurung, CTO of eCommerce Solutions Nepal
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
+                >
+                  <p class="text-gray-600 italic mb-4">
+                    "Suman is a top-notch developer. His work on our application
+                    was flawless, and his ability to understand our requirements
+                    and deliver on time was impressive. We highly recommend
+                    him!"
+                  </p>
+                  <p class="text-claude-dark font-semibold">
+                    - Sunita Rai, Founder of StartUp Nepal
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-4 space-x-2">
+            <button
+              @click="prevSlide"
+              class="bg-claude text-white px-4 py-2 rounded-full focus:outline-none hover:bg-claude-dark transition-colors duration-300"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              @click="nextSlide"
+              class="bg-claude text-white px-4 py-2 rounded-full focus:outline-none hover:bg-claude-dark transition-colors duration-300"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <script>
+          function testimonialSlider() {
+            return {
+              currentIndex: 0,
+              testimonials: 4, // number of testimonials
+              nextSlide() {
+                this.currentIndex = (this.currentIndex + 1) % this.testimonials;
+              },
+              prevSlide() {
+                this.currentIndex =
+                  (this.currentIndex - 1 + this.testimonials) %
+                  this.testimonials;
+              },
+            };
+          }
+        </script>
+
+        <div x-show="activeTab === 'contact'" class="animate-fade-in">
+          <h2 class="text-3xl font-bold mb-6 text-claude-dark">
+            Contact Information
+          </h2>
+          <ul class="space-y-4">
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-claude mr-4 text-2xl"></i
+              ><span class="text-lg">summonshr@gmail.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone text-claude mr-4 text-2xl"></i
+              ><span class="text-lg">+977 9841145614</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt text-claude mr-4 text-2xl"></i
+              ><span class="text-lg">+91 8850852489</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt text-claude mr-4 text-2xl"></i
+              ><span class="text-lg">Kathmandu, Nepal</span>
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <footer class="mt-12 text-center text-gray-600">
+        <p>© 2024 Suman Shrestha. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <style>
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-fade-in-down {
+        animation: fadeInDown 0.5s ease-out;
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out;
+      }
+    </style>
   </body>
   <script type="application/ld+json">
     {
