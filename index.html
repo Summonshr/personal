@@ -4,558 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suman Shrestha - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2563eb;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #2563eb;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1e293b;
-            line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: #2563eb;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #2563eb;
-            border: 2px solid #2563eb;
-        }
-
-        .btn-secondary:hover {
-            background: #2563eb;
-            color: white;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #1e293b;
-        }
-
-        /* About Section */
-        .about {
-            background: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .contact-item strong {
-            width: 80px;
-            color: #1e293b;
-        }
-
-        .contact-item a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: #f8fafc;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #1e293b;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: #e0f2fe;
-            color: #0369a1;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Experience Section */
-        .experience {
-            background: white;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #e2e8f0;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 2rem;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 2rem;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .timeline-date {
-            color: #2563eb;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-company {
-            color: #64748b;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-description {
-            color: #64748b;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .timeline-description ul {
-            margin-left: 1rem;
-        }
-
-        .timeline-description li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Projects Section */
-        .projects {
-            background: #f8fafc;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-description {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-link {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Publications Section */
-        .publications {
-            background: white;
-        }
-
-        .publication-item {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 1.5rem;
-        }
-
-        .publication-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-description {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #1e293b;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 3rem !important;
-                padding-right: 0 !important;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
-        /* Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* Custom Animations */
+        @keyframes gradientPulse {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .gradient-pulse {
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6, #06b6d4, #1e3a8a);
+            background-size: 200% 200%;
+            animation: gradientPulse 15s ease infinite;
+        }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Smooth Scrollbar */
+        html { scroll-behavior: smooth; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1e40af; }
     </style>
 </head>
-<body>
+<body class="font-inter bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">SS</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-            </ul>
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">SS</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-blue-600 font-medium transition">Skills</a>
+                <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium transition">Experience</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium transition">Projects</a>
+                <a href="#publications" class="text-gray-700 hover:text-blue-600 font-medium transition">Publications</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-blue-600 font-medium">Skills</a>
+                <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium">Experience</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium">Projects</a>
+                <a href="#publications" class="text-gray-700 hover:text-blue-600 font-medium">Publications</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Suman Shrestha</h1>
-                <div class="subtitle">Full Stack Web Developer</div>
-                <p>Versatile Full Stack Developer with 8 years of experience specializing in Laravel, React, and Vue. Passionate about creating efficient, scalable, and user-friendly applications.</p>
-                <div class="cta-buttons">
-                    <a href="#about" class="btn btn-primary">Learn More</a>
-                    <a href="mailto:Summonshr@gmail.com" class="btn btn-secondary">Get In Touch</a>
+    <section id="home" class="min-h-screen flex items-center gradient-pulse text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold gradient-text fade-in">Suman Shrestha</h1>
+                <div class="text-xl md:text-2xl font-light mt-4 fade-in">Full Stack Web Developer</div>
+                <p class="text-lg md:text-xl text-gray-200 mt-6 fade-in">Versatile Full Stack Developer with 8 years of experience specializing in Laravel, React, and Vue. Passionate about crafting efficient, scalable, and user-friendly applications.</p>
+                <div class="mt-8 flex justify-center gap-4 fade-in">
+                    <a href="#about" class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:-translate-y-1 transition shadow-lg">Learn More</a>
+                    <a href="mailto:Summonshr@gmail.com" class="border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition">Get In Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>I'm a passionate Full Stack Web Developer with over 8 years of experience in building robust web applications. My expertise spans across modern web technologies including Laravel, React, Vue.js, and various database systems.</p>
-                    <p>I have extensive experience in core banking systems, cybersecurity solutions, and enterprise-level applications. I'm particularly skilled in developing efficient workflows, optimizing database performance, and implementing secure coding practices.</p>
-                    <p>I hold a Bachelor's degree in Computer Science and Information Technology from St. Xavier's College and continuously stay updated with the latest industry trends and technologies.</p>
+<section id="about" class="py-24 bg-gradient-to-b from-gray-50 to-blue-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <h2 class="text-5xl md:text-6xl font-extrabold text-center text-gray-900 mb-4 fade-in-up">About Me</h2>
+        <p class="text-xl text-center text-gray-600 mb-12 fade-in-up delay-1">Crafting innovative solutions with code and passion</p>
+
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+            <!-- Profile Image with Hover Effect -->
+            <div class="relative fade-in-up delay-2">
+                <div class="w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-blue-500 shadow-lg transform hover:scale-105 transition duration-500">
+                    <img src="https://via.placeholder.com/256" alt="Suman Shrestha" class="w-full h-full object-cover">
                 </div>
-                <div class="contact-info fade-in">
-                    <div class="contact-item">
-                        <strong>Email:</strong> <a href="mailto:Summonshr@gmail.com">Summonshr@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong> +977-9841145614
-                    </div>
-                    <div class="contact-item">
-                        <strong>Location:</strong> Dhapakhel, Lalitpur
-                    </div>
-                    <div class="contact-item">
-                        <strong>LinkedIn:</strong> <a href="#">suman-shresth</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>GitHub:</strong> <a href="#">summonshr</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Website:</strong> <a href="#">sumanshresth.com.np</a>
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent rounded-full opacity-0 hover:opacity-100 transition duration-500"></div>
+            </div>
+
+            <!-- Bio Content -->
+            <div class="md:col-span-2 flex flex-col justify-center fade-in-up delay-3">
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        I'm <span class="font-semibold text-blue-600">Suman Shrestha</span>, a dedicated Full Stack Web Developer with over 8 years of experience building robust, scalable web applications. My expertise lies in <span class="font-medium">Laravel, React, Vue.js</span>, and advanced database systems, delivering solutions that drive efficiency and innovation.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Specializing in <span class="font-medium">core banking systems</span>, <span class="font-medium">cybersecurity solutions</span>, and enterprise applications, I focus on optimizing workflows, enhancing database performance, and implementing secure coding practices to create seamless user experiences.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        I hold a Bachelor's degree in Computer Science and Information Technology from <span class="font-medium">St. Xavier's College</span> and am committed to staying at the forefront of industry trends, continuously refining my craft.
+                    </p>
+                    <div class="flex justify-start">
+                        <a href="#resume" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 hover:-translate-y-1 transition shadow-md">Download Resume</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Contact Info -->
+        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex items-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in-up delay-4">
+                <svg class="w-6 h-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <div>
+                    <strong class="text-gray-800">Email:</strong>
+                    <a href="mailto:Summonshr@gmail.com" class="text-blue-600 hover:underline ml-2">Summonshr@gmail.com</a>
+                </div>
+            </div>
+            <div class="flex items-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in-up delay-5">
+                <svg class="w-6 h-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <div>
+                    <strong class="text-gray-800">Phone:</strong>
+                    <span class="ml-2">+977-9841145614</span>
+                </div>
+            </div>
+            <div class="flex items-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in-up delay-6">
+                <svg class="w-6 h-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <div>
+                    <strong class="text-gray-800">Location:</strong>
+                    <span class="ml-2">Dhapakhel, Lalitpur</span>
+                </div>
+            </div>
+            <div class="flex items-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in-up delay-7">
+                <svg class="w-6 h-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+                <div>
+                    <strong class="text-gray-800">LinkedIn:</strong>
+                    <a href="#" class="text-blue-600 hover:underline ml-2">suman-shresth</a>
+                </div>
+            </div>
+            <div class="flex items-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in-up delay-8">
+                <svg class="w-6 h-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 14v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                <div>
+                    <strong class="text-gray-800">GitHub:</strong>
+                    <a href="#" class="text-blue-600 hover:underline ml-2">summonshr</a>
+                </div>
+            </div>
+            <div class="flex items-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in-up delay-9">
+                <svg class="w-6 h-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                <div>
+                    <strong class="text-gray-800">Website:</strong>
+                    <a href="#" class="text-blue-600 hover:underline ml-2">sumanshresth.com.np</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Custom Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+        .delay-6 { animation-delay: 1.2s; }
+        .delay-7 { animation-delay: 1.4s; }
+        .delay-8 { animation-delay: 1.6s; }
+        .delay-9 { animation-delay: 1.8s; }
+    </style>
+</section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title fade-in">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">Alpine.js</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TailwindCSS</span>
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 fade-in">Skills & Technologies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Alpine.js</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">TailwindCSS</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3>Backend Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Laravel</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Inertia</span>
-                        <span class="skill-tag">Livewire</span>
-                        <span class="skill-tag">PL/SQL</span>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Laravel</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Inertia</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Livewire</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PL/SQL</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3>Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Oracle</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MongoDB</span>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Oracle</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">FilamentPHP</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">GitHub CI/CD</span>
-                        <span class="skill-tag">Finacle</span>
-                        <span class="skill-tag">TypeScript</span>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools & Others</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">FilamentPHP</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">GitHub CI/CD</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finacle</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
                     </div>
                 </div>
             </div>
@@ -563,17 +232,18 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title fade-in">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Feb 2023 - Present</div>
-                        <div class="timeline-title">Senior Software Engineer</div>
-                        <div class="timeline-company">Cyberarrow.io</div>
-                        <div class="timeline-description">
-                            <ul>
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 fade-in">Work Experience</h2>
+            <div class="relative max-w-3xl mx-auto">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full"></div>
+                <div class="space-y-8">
+                    <div class="relative w-full md:w-1/2 md:pr-8 fade-in">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                            <div class="text-blue-600 font-semibold text-sm">Feb 2023 - Present</div>
+                            <div class="text-xl font-semibold text-gray-800">Senior Software Engineer</div>
+                            <div class="text-gray-600 font-medium">Cyberarrow.io</div>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600">
                                 <li>Leading development of cybersecurity solutions and GRC software</li>
                                 <li>Automated compliance activities, reducing manual effort and costs</li>
                                 <li>Utilized FilamentPHP to build admin panels, reducing development time by 50%</li>
@@ -581,14 +251,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Dec 2021 - Jan 2023</div>
-                        <div class="timeline-title">Senior Software Engineer</div>
-                        <div class="timeline-company">Nelito Systems</div>
-                        <div class="timeline-description">
-                            <ul>
+                    <div class="relative w-full md:w-1/2 md:ml-auto md:pl-8 fade-in">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                            <div class="text-blue-600 font-semibold text-sm">Dec 2021 - Jan 2023</div>
+                            <div class="text-xl font-semibold text-gray-800">Senior Software Engineer</div>
+                            <div class="text-gray-600 font-medium">Nelito Systems</div>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600">
                                 <li>Developed high-performance banking applications with Laravel and React</li>
                                 <li>Implemented Finacle core banking system integration</li>
                                 <li>Optimized database queries, improving response time by 30%</li>
@@ -596,14 +264,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Feb 2021 - Dec 2021</div>
-                        <div class="timeline-title">Software Engineer</div>
-                        <div class="timeline-company">Citizen Bank International Ltd</div>
-                        <div class="timeline-description">
-                            <ul>
+                    <div class="relative w-full md:w-1/2 md:pr-8 fade-in">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                            <div class="text-blue-600 font-semibold text-sm">Feb 2021 - Dec 2021</div>
+                            <div class="text-xl font-semibold text-gray-800">Software Engineer</div>
+                            <div class="text-gray-600 font-medium">Citizen Bank International Ltd</div>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600">
                                 <li>Developed banking applications using Laravel and Vue.js</li>
                                 <li>Built automated mailer system using Node.js and Oracle</li>
                                 <li>Handled bulk upload processing and MIS reporting</li>
@@ -611,14 +277,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Feb 2019 - Feb 2021</div>
-                        <div class="timeline-title">Software Engineer</div>
-                        <div class="timeline-company">NIC Asia Bank Ltd</div>
-                        <div class="timeline-description">
-                            <ul>
+                    <div class="relative w-full md:w-1/2 md:ml-auto md:pl-8 fade-in">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                            <div class="text-blue-600 font-semibold text-sm">Feb 2019 - Feb 2021</div>
+                            <div class="text-xl font-semibold text-gray-800">Software Engineer</div>
+                            <div class="text-gray-600 font-medium">NIC Asia Bank Ltd</div>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600">
                                 <li>Maintained and developed robust applications using Laravel and Node.js</li>
                                 <li>Developed custom JSON to XML transformer for third-party integration</li>
                                 <li>Implemented database query reporting for efficient data analysis</li>
@@ -632,49 +296,49 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title fade-in">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-title">Advanced Widgets for MeroShare</div>
-                        <div class="project-description">Chrome extension that elevates MeroShare experience by integrating valuable data and insights directly into portfolio tables.</div>
-                        <a href="#" class="project-link">View Extension →</a>
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 fade-in">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <div class="p-6">
+                        <div class="text-xl font-semibold text-gray-800">Advanced Widgets for MeroShare</div>
+                        <div class="text-gray-600 mt-2">Chrome extension that elevates MeroShare experience by integrating valuable data and insights directly into portfolio tables.</div>
+                        <a href="#" class="text-blue-600 font-medium mt-4 inline-block hover:underline">View Extension →</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-title">TradingView Site</div>
-                        <div class="project-description">Free Live Technical Analysis Charts of Nepal Stock Exchange (NEPSE CHART) for traders and investors.</div>
-                        <a href="#" class="project-link">View Project →</a>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <div class="p-6">
+                        <div class="text-xl font-semibold text-gray-800">TradingView Site</div>
+                        <div class="text-gray-600 mt-2">Free Live Technical Analysis Charts of Nepal Stock Exchange (NEPSE CHART) for traders and investors.</div>
+                        <a href="#" class="text-blue-600 font-medium mt-4 inline-block hover:underline">View Project →</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-title">Oracle Browser</div>
-                        <div class="project-description">SQL viewer application built with ReactJS, TailwindCSS, and NodeJS Fastify for database management.</div>
-                        <a href="#" class="project-link">View Project →</a>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <div class="p-6">
+                        <div class="text-xl font-semibold text-gray-800">Oracle Browser</div>
+                        <div class="text-gray-600 mt-2">SQL viewer application built with ReactJS, TailwindCSS, and NodeJS Fastify for database management.</div>
+                        <a href="#" class="text-blue-600 font-medium mt-4 inline-block hover:underline">View Project →</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-title">WP Travel</div>
-                        <div class="project-description">Popular WordPress plugin designed for travel and tour companies to manage bookings and itineraries.</div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <div class="p-6">
+                        <div class="text-xl font-semibold text-gray-800">WP Travel</div>
+                        <div class="text-gray-600 mt-2">Popular WordPress plugin designed for travel and tour companies to manage bookings and itineraries.</div>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-title">GREMaze</div>
-                        <div class="project-description">Online exam application for GRE preparation built with ReactJS and TailwindCSS.</div>
-                        <a href="#" class="project-link">View Project →</a>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <div class="p-6">
+                        <div class="text-xl font-semibold text-gray-800">GREMaze</div>
+                        <div class="text-gray-600 mt-2">Online exam application for GRE preparation built with ReactJS and TailwindCSS.</div>
+                        <a href="#" class="text-blue-600 font-medium mt-4 inline-block hover:underline">View Project →</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-title">Electron Notebook</div>
-                        <div class="project-description">Cross-platform note-taking application built with Electron, TailwindCSS, and VueJS.</div>
-                        <a href="#" class="project-link">View Project →</a>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition fade-in">
+                    <div class="p-6">
+                        <div class="text-xl font-semibold text-gray-800">Electron Notebook</div>
+                        <div class="text-gray-600 mt-2">Cross-platform note-taking application built with Electron, TailwindCSS, and VueJS.</div>
+                        <a href="#" class="text-blue-600 font-medium mt-4 inline-block hover:underline">View Project →</a>
                     </div>
                 </div>
             </div>
@@ -682,68 +346,67 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title fade-in">Publications & Writing</h2>
-            <div class="publication-item fade-in">
-                <div class="publication-title">The 7 Levels of Laravel Optimization</div>
-                <div class="publication-description">From Rookie to Optimization Overlord — with Benchmark — 98% reduction in processing time through advanced optimization techniques.</div>
-            </div>
-            <div class="publication-item fade-in">
-                <div class="publication-title">Must-Know Tips for Efficient Laravel Apps</div>
-                <div class="publication-description">Comprehensive guide covering column selection, eager loading, caching, queues, indexes, and performance optimization strategies.</div>
-            </div>
-            <div class="publication-item fade-in">
-                <div class="publication-title">Technical Blog on Medium</div>
-                <div class="publication-description">Regular technical articles sharing insights on web development, Laravel best practices, and modern development workflows.</div>
+    <section id="publications" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 fade-in">Publications & Writing</h2>
+            <div class="space-y-6">
+                <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 fade-in">
+                    <div class="text-xl font-semibold text-gray-800">The 7 Levels of Laravel Optimization</div>
+                    <div class="text-gray-600 mt-2">From Rookie to Optimization Overlord — with Benchmark — 98% reduction in processing time through advanced optimization techniques.</div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 fade-in">
+                    <div class="text-xl font-semibold text-gray-800">Must-Know Tips for Efficient Laravel Apps</div>
+                    <div class="text-gray-600 mt-2">Comprehensive guide covering column selection, eager loading, caching, queues, indexes, and performance optimization strategies.</div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 fade-in">
+                    <div class="text-xl font-semibold text-gray-800">Technical Blog on Medium</div>
+                    <div class="text-gray-600 mt-2">Regular technical articles sharing insights on web development, Laravel best practices, and modern development workflows.</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Suman Shrestha. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white text-center py-8">
+        <div class="container mx-auto px-4">
+            <p>© 2025 Suman Shrestha. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden'); // Close mobile menu on link click
                 }
             });
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Fade-in Animation on Scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Initial animation for hero section
+        // Initial Hero Animation
         setTimeout(() => {
-            document.querySelector('.hero .fade-in').classList.add('visible');
+            document.querySelectorAll('.hero .fade-in').forEach(el => el.classList.add('visible'));
         }, 300);
     </script>
 </body>
