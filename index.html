@@ -1,833 +1,750 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suman Shrestha - Laravel Developer in Nepal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suman Shrestha | Laravel Developer in Nepal</title>
-    <meta
-      name="description"
-      content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
-    />
-    <meta name="insight-app-sec-validation" content="1c13be3c-af5b-49f7-b0f6-898a5e0bbb0f">
-    <meta
-      name="keywords"
-      content="Laravel Developer, Nepal, Web Development, PHP, Suman Shrestha"
-    />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.sumanshresth.com.np/" />
-    <meta
-      property="og:title"
-      content="Suman Shrestha | Top Laravel Developer in Nepal"
-    />
-    <meta
-      property="og:description"
-      content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
-    />
-
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.sumanshresth.com.np/" />
-    <meta
-      property="twitter:title"
-      content="Suman Shrestha | Top Laravel Developer in Nepal"
-    />
-    <meta
-      property="twitter:description"
-      content="Suman Shrestha is a leading Laravel developer in Nepal with over 7 years of experience. Expert in Laravel, Livewire, and FilamentPHP for robust web applications."
-    />
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman Shrestha - Full Stack Developer</title>
     <style>
-      [x-cloak] {
-        display: none !important;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-item strong {
+            width: 80px;
+            color: #1e293b;
+        }
+
+        .contact-item a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #f8fafc;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 2rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2rem;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-date {
+            color: #2563eb;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .timeline-description ul {
+            margin-left: 1rem;
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #f8fafc;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Publications Section */
+        .publications {
+            background: white;
+        }
+
+        .publication-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-description {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 3rem !important;
+                padding-right: 0 !important;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Suman Shrestha</h1>
+                <div class="subtitle">Full Stack Web Developer</div>
+                <p>Versatile Full Stack Developer with 8 years of experience specializing in Laravel, React, and Vue. Passionate about creating efficient, scalable, and user-friendly applications.</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="mailto:Summonshr@gmail.com" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>I'm a passionate Full Stack Web Developer with over 8 years of experience in building robust web applications. My expertise spans across modern web technologies including Laravel, React, Vue.js, and various database systems.</p>
+                    <p>I have extensive experience in core banking systems, cybersecurity solutions, and enterprise-level applications. I'm particularly skilled in developing efficient workflows, optimizing database performance, and implementing secure coding practices.</p>
+                    <p>I hold a Bachelor's degree in Computer Science and Information Technology from St. Xavier's College and continuously stay updated with the latest industry trends and technologies.</p>
+                </div>
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:Summonshr@gmail.com">Summonshr@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> +977-9841145614
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Dhapakhel, Lalitpur
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="#">suman-shresth</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub:</strong> <a href="#">summonshr</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Website:</strong> <a href="#">sumanshresth.com.np</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Alpine.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TailwindCSS</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Inertia</span>
+                        <span class="skill-tag">Livewire</span>
+                        <span class="skill-tag">PL/SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FilamentPHP</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GitHub CI/CD</span>
+                        <span class="skill-tag">Finacle</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2023 - Present</div>
+                        <div class="timeline-title">Senior Software Engineer</div>
+                        <div class="timeline-company">Cyberarrow.io</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Leading development of cybersecurity solutions and GRC software</li>
+                                <li>Automated compliance activities, reducing manual effort and costs</li>
+                                <li>Utilized FilamentPHP to build admin panels, reducing development time by 50%</li>
+                                <li>Implemented secure coding practices and collaborated with cross-functional teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Dec 2021 - Jan 2023</div>
+                        <div class="timeline-title">Senior Software Engineer</div>
+                        <div class="timeline-company">Nelito Systems</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed high-performance banking applications with Laravel and React</li>
+                                <li>Implemented Finacle core banking system integration</li>
+                                <li>Optimized database queries, improving response time by 30%</li>
+                                <li>Achieved 40% increase in user engagement and 25% reduction in processing time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2021 - Dec 2021</div>
+                        <div class="timeline-title">Software Engineer</div>
+                        <div class="timeline-company">Citizen Bank International Ltd</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed banking applications using Laravel and Vue.js</li>
+                                <li>Built automated mailer system using Node.js and Oracle</li>
+                                <li>Handled bulk upload processing and MIS reporting</li>
+                                <li>Mentored junior developers, enhancing team productivity by 20%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2019 - Feb 2021</div>
+                        <div class="timeline-title">Software Engineer</div>
+                        <div class="timeline-company">NIC Asia Bank Ltd</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Maintained and developed robust applications using Laravel and Node.js</li>
+                                <li>Developed custom JSON to XML transformer for third-party integration</li>
+                                <li>Implemented database query reporting for efficient data analysis</li>
+                                <li>Provided training and support to users on system operation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <div class="project-title">Advanced Widgets for MeroShare</div>
+                        <div class="project-description">Chrome extension that elevates MeroShare experience by integrating valuable data and insights directly into portfolio tables.</div>
+                        <a href="#" class="project-link">View Extension →</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <div class="project-title">TradingView Site</div>
+                        <div class="project-description">Free Live Technical Analysis Charts of Nepal Stock Exchange (NEPSE CHART) for traders and investors.</div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <div class="project-title">Oracle Browser</div>
+                        <div class="project-description">SQL viewer application built with ReactJS, TailwindCSS, and NodeJS Fastify for database management.</div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <div class="project-title">WP Travel</div>
+                        <div class="project-description">Popular WordPress plugin designed for travel and tour companies to manage bookings and itineraries.</div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <div class="project-title">GREMaze</div>
+                        <div class="project-description">Online exam application for GRE preparation built with ReactJS and TailwindCSS.</div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <div class="project-title">Electron Notebook</div>
+                        <div class="project-description">Cross-platform note-taking application built with Electron, TailwindCSS, and VueJS.</div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title fade-in">Publications & Writing</h2>
+            <div class="publication-item fade-in">
+                <div class="publication-title">The 7 Levels of Laravel Optimization</div>
+                <div class="publication-description">From Rookie to Optimization Overlord — with Benchmark — 98% reduction in processing time through advanced optimization techniques.</div>
+            </div>
+            <div class="publication-item fade-in">
+                <div class="publication-title">Must-Know Tips for Efficient Laravel Apps</div>
+                <div class="publication-description">Comprehensive guide covering column selection, eager loading, caching, queues, indexes, and performance optimization strategies.</div>
+            </div>
+            <div class="publication-item fade-in">
+                <div class="publication-title">Technical Blog on Medium</div>
+                <div class="publication-description">Regular technical articles sharing insights on web development, Laravel best practices, and modern development workflows.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Suman Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              claude: {
-                light: '#E8F3FF',
-                DEFAULT: '#0F70E6',
-                dark: '#0A4B9E',
-              },
-            },
-          },
-        },
-      };
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initial animation for hero section
+        setTimeout(() => {
+            document.querySelector('.hero .fade-in').classList.add('visible');
+        }, 300);
     </script>
-  </head>
-  
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VDFE7WF8D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7VDFE7WF8D');
-</script>
-  <body class="bg-claude-light font-sans text-gray-800">
-    <div
-      x-data="{ activeTab: 'about' }"
-      class="container mx-auto p-4 max-w-6xl"
-      x-cloak
-    >
-      <header class="text-center mb-12 animate-fade-in-down">
-        <h1 class="text-5xl font-bold text-claude-dark mb-2">Suman Shrestha</h1>
-        <p class="text-2xl text-claude mb-1">Laravel Developer in Nepal</p>
-        <p class="text-xl text-gray-600">
-          Full-Stack Web Developer & Laravel Specialist
-        </p>
-        <div class="mt-4 flex justify-center space-x-6">
-          <a
-            href="https://github.com/summonshr"
-            target="_blank"
-            class="text-[#333] hover:text-[#24292e] transition-colors"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/suman-shresth"
-            target="_blank"
-            class="text-[#0077B5] hover:text-[#006699] transition-colors"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin-in fa-2x"></i>
-          </a>
-          <a
-            href="https://twitter.com/sumfreelancer"
-            target="_blank"
-            class="text-[#1DA1F2] hover:text-[#0c85d0] transition-colors"
-            aria-label="Twitter"
-          >
-            <i class="fab fa-twitter fa-2x"></i>
-          </a>
-        </div>
-      </header>
-
-      <nav class="mb-12 bg-white shadow-lg rounded-full">
-        <ul class="flex justify-center space-x-4 p-2">
-          <li>
-            <button
-              @click="activeTab = 'about'"
-              :class="{ 'bg-claude text-white': activeTab === 'about' }"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              About
-            </button>
-          </li>
-          <li>
-            <button
-              @click="activeTab = 'skills'"
-              :class="{ 'bg-claude text-white': activeTab === 'skills' }"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              Skills
-            </button>
-          </li>
-          <li>
-            <button
-              @click="activeTab = 'experience'"
-              :class="{ 'bg-claude text-white': activeTab === 'experience' }"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              Experience
-            </button>
-          </li>
-          <li>
-            <button
-              @click="activeTab = 'projects'"
-              :class="{ 'bg-claude text-white': activeTab === 'projects' }"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              Projects
-            </button>
-          </li>
-          <li>
-            <button
-              :class="{ 'bg-claude text-white': activeTab === 'testimonials' }"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              Testimonials
-            </button>
-          </li>
-          <li>
-            <button
-              @click="activeTab = 'contact'"
-              :class="{ 'bg-claude text-white': activeTab === 'contact' }"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              Contact
-            </button>
-          </li>
-          <li>
-            <button
-              @click="window.location.href='https://blog.sumanshresth.com.np'"
-              class="px-6 py-2 rounded-full focus:outline-none transition duration-300 hover:bg-claude hover:text-white"
-            >
-              Blog
-            </button>
-          </li>
-        </ul>
-      </nav>
-
-      <main class="bg-white shadow-xl rounded-lg p-8">
-        <div x-show="activeTab === 'about'" class="animate-fade-in">
-          <h3 className="text-2xl font-bold mb-4 text-claude-dark">If you came for firefox chrome extension, <a style="background: #000362;
-            color: #f1f1f1;
-            padding: 5px 10px;
-            border-radius: 19px;"href="/firefox-advanced-widgets-for-meroshare.xpi"> Click here </a></h3>
-          <h2 class="text-3xl font-bold mb-6 text-claude-dark">About Me</h2>
-          <p class="mb-4 text-lg">
-            👋 Hello! I'm Suman, a
-            <strong>passionate full-stack web developer</strong> with over 7
-            years of experience crafting robust, scalable, and user-friendly web
-            applications.
-          </p>
-          <p class="mb-6 text-lg">
-            🚀 My expertise lies in leveraging cutting-edge technologies like
-            <strong>Laravel, Livewire, and FilamentPHP</strong> to build
-            efficient and maintainable solutions. I thrive on turning complex
-            problems into simple, beautiful, and intuitive designs.
-          </p>
-          <h3 class="text-2xl font-semibold mb-4 text-claude">
-            💡 What sets me apart:
-          </h3>
-          <ul class="list-none space-y-2 mb-6">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-claude mr-2"></i
-              ><strong>Full-Stack Proficiency:</strong> From database design to
-              front-end finesse, I handle it all.
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-claude mr-2"></i
-              ><strong>Problem-Solving Skills:</strong> I don't just code; I
-              architect solutions that drive business growth.
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-claude mr-2"></i
-              ><strong>Continuous Learner:</strong> In this ever-evolving tech
-              landscape, I stay ahead of the curve.
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-claude mr-2"></i
-              ><strong>Team Player:</strong> I believe great software is built
-              by great teams, and I excel in collaborative environments.
-            </li>
-          </ul>
-          <p class="text-lg">
-            🌟 If you're looking for a developer who can transform your ideas
-            into reality, optimize your existing systems, or lead your next big
-            project, let's connect! I'm always excited to take on new challenges
-            and create impactful solutions.
-          </p>
-        </div>
-
-        <div x-show="activeTab === 'skills'" class="animate-fade-in">
-          <h2 class="text-3xl font-bold mb-6 text-claude-dark">Skills</h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <a
-              href="https://laravel.com"
-              target="_blank"
-              class="bg-[#FF2D20] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fab fa-laravel text-4xl mb-2"></i>
-              <div>Laravel</div>
-            </a>
-            <a
-              href="https://laravel-livewire.com"
-              target="_blank"
-              class="bg-[#FB70A9] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fas fa-bolt text-4xl mb-2"></i>
-              <div>Livewire</div>
-            </a>
-            <a
-              href="https://filamentphp.com"
-              target="_blank"
-              class="bg-[#F59E0B] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fas fa-layer-group text-4xl mb-2"></i>
-              <div>FilamentPHP</div>
-            </a>
-            <a
-              href="https://alpinejs.dev"
-              target="_blank"
-              class="bg-[#77C1D2] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fab fa-js text-4xl mb-2"></i>
-              <div>AlpineJs</div>
-            </a>
-            <a
-              href="https://tailwindcss.com"
-              target="_blank"
-              class="bg-[#38B2AC] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fab fa-css3 text-4xl mb-2"></i>
-              <div>TailwindCSS</div>
-            </a>
-            <a
-              href="https://reactjs.org"
-              target="_blank"
-              class="bg-[#61DAFB] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-black"
-            >
-              <i class="fab fa-react text-4xl mb-2"></i>
-              <div>React</div>
-            </a>
-            <a
-              href="https://vuejs.org"
-              target="_blank"
-              class="bg-[#4FC08D] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fab fa-vuejs text-4xl mb-2"></i>
-              <div>Vue</div>
-            </a>
-            <a
-              href="https://www.tradingview.com/lightweight-charts/"
-              target="_blank"
-              class="bg-[#2962FF] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fas fa-chart-line text-4xl mb-2"></i>
-              <div>TradingView Library</div>
-            </a>
-            <a
-              href="https://www.oracle.com/database/technologies/appdev/plsql.html"
-              target="_blank"
-              class="bg-[#F80000] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fas fa-database text-4xl mb-2"></i>
-              <div>PL/SQL (Oracle)</div>
-            </a>
-            <a
-              href="https://inertiajs.com"
-              target="_blank"
-              class="bg-[#9553E9] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fas fa-project-diagram text-4xl mb-2"></i>
-              <div>InertiaJS</div>
-            </a>
-            <a
-              href="https://nodejs.org"
-              target="_blank"
-              class="bg-[#339933] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fab fa-node-js text-4xl mb-2"></i>
-              <div>Node.js</div>
-            </a>
-
-            <a
-              href="https://pestphp.com"
-              target="_blank"
-              class="bg-[#00B1A9] p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center text-white"
-            >
-              <i class="fas fa-vial text-4xl mb-2"></i>
-              <div>Pest PHP</div>
-            </a>
-          </div>
-        </div>
-
-        <div x-show="activeTab === 'experience'" class="animate-fade-in">
-          <h2 class="text-3xl font-bold mb-6 text-claude-dark">
-            Professional Experience
-          </h2>
-          <div class="space-y-6">
-            <div
-              class="bg-gradient-to-r from-[#FF2D20] to-[#FF8080] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div class="bg-white p-6 rounded-lg">
-                <h3
-                  class="text-2xl font-semibold text-[#FF2D20] mb-2 flex items-center"
-                >
-                  <i class="fas fa-code mr-2"></i>
-                  Full Stack Developer
-                </h3>
-                <p class="text-lg mb-4">
-                  Experienced in creating efficient, scalable, and user-friendly applications using modern web technologies.
-                </p>
-                <ul class="list-disc list-inside text-lg mb-4">
-                  <li>Laravel, Tailwind CSS, PestPHP</li>
-                  <li>FilamentPHP, Livewire, Alpine JS</li>
-                  <li>Inertia, React Ecosystem</li>
-                  <li>Node.js (Fastify, Express)</li>
-                  <li>Oracle PL/SQL, Finacle</li>
-                  <li>Docker</li>
-                </ul>
-                <a
-                  href="https://sumanshresth.com.np"
-                  target="_blank"
-                  class="inline-block mt-2 text-[#FF2D20] hover:underline"
-                  >View Portfolio <i class="fas fa-arrow-right ml-1"></i
-                ></a>
-              </div>
-            </div>
-            
-            <div
-              class="bg-gradient-to-r from-[#F80000] to-[#FF4B4B] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div class="bg-white p-6 rounded-lg">
-                <h3
-                  class="text-2xl font-semibold text-[#F80000] mb-2 flex items-center"
-                >
-                  <i class="fas fa-database mr-2"></i>
-                  PL/SQL (Oracle) Developer
-                </h3>
-                <p class="text-lg">
-                  Over 5 years of experience in the software industry with a
-                  strong understanding of PL/SQL programming and Oracle
-                  Database. Proficient in creating data-driven applications and solving complex data challenges.
-                </p>
-                <a
-                  href="https://www.oracle.com/database/technologies/appdev/plsql.html"
-                  target="_blank"
-                  class="inline-block mt-4 text-[#F80000] hover:underline"
-                  >Learn more about PL/SQL
-                  <i class="fas fa-arrow-right ml-1"></i
-                ></a>
-              </div>
-            </div>
-            
-            <div
-              class="bg-gradient-to-r from-[#2ecc71] to-[#27ae60] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div class="bg-white p-6 rounded-lg">
-                <h3
-                  class="text-2xl font-semibold text-[#2ecc71] mb-2 flex items-center"
-                >
-                  <i class="fas fa-university mr-2"></i>
-                  Banking Experience 
-                </h3>
-                <p class="text-lg">
-                  Valuable experience in the banking sector, providing insights into financial systems and regulations. Proficient in Finacle, crafting financial solutions that streamline operations and drive success.
-                </p>
-                <a
-                  href="https://linkedin.com/in/suman-shresth"
-                  class="inline-block mt-4 text-[#2ecc71] hover:underline"
-                  >Learn more about my banking experience
-                  <i class="fas fa-arrow-right ml-1"></i
-                ></a>
-              </div>
-            </div>
-        
-            <div
-              class="bg-gradient-to-r from-[#3498db] to-[#2980b9] p-1 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div class="bg-white p-6 rounded-lg">
-                <h3
-                  class="text-2xl font-semibold text-[#3498db] mb-2 flex items-center"
-                >
-                  <i class="fas fa-pencil-alt mr-2"></i>
-                  Open Source Contributor
-                </h3>
-                <p class="text-lg">
-                  Active contributor to open-source projects, showcasing innovation and creativity. Notable project includes a package that automates controllers and routes for web development.
-                </p>
-                <a
-                  href="https://github.com/summonshr/requests"
-                  target="_blank"
-                  class="inline-block mt-4 text-[#3498db] hover:underline"
-                  >View Requests Package
-                  <i class="fas fa-arrow-right ml-1"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div x-show="activeTab === 'projects'" class="animate-fade-in">
-          <h2 class="text-3xl font-bold mb-6 text-claude-dark">
-            Featured Projects
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div
-              class="bg-gradient-to-br from-[#1E3050] to-[#4ECDC4] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
-                <h3
-                  class="text-2xl font-semibold text-[#1E3050] mb-2 flex items-center"
-                >
-                  <i class="fa-brands fa-chrome mr-2"></i>
-                  Meroshare Advanced
-                </h3>
-                <p class="mb-4 flex-grow">
-                  MeroShare Enhanced is a Chrome extension that enhances the MeroShare platform by adding valuable data to portfolio tables.
-                </p>
-                <p class="text-sm text-gray-600 mb-4">
-                  <strong>Technologies:</strong>
-                  <span
-                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
-                    >JavaScript</span
-                  >
-                  <span
-                    class="inline-block bg-[#4FC08D] text-white rounded px-2 py-1 text-xs mr-1"
-                    >Chrome</span
-                  >
-                  <span
-                    class="inline-block bg-[#00758F] text-white rounded px-2 py-1 text-xs"
-                    >Extension</span
-                  >
-                </p>
-                <a
-                  href="https://chromewebstore.google.com/detail/meroshare-advanced/fnogfgkjgpkajapikbnalbhcenbenemn"
-                  target="_blank"
-                  class="text-[#FF6B6B] hover:underline mt-auto inline-flex items-center"
-                >
-                  View Project <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-              </div>
-            </div>
-            <div
-              class="bg-gradient-to-br from-[#FF6B6B] to-[#4ECDC4] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
-                <h3
-                  class="text-2xl font-semibold text-[#FF6B6B] mb-2 flex items-center"
-                >
-                  <i class="fas fa-utensils mr-2"></i>
-                  HilifeFoods
-                </h3>
-                <p class="mb-4 flex-grow">
-                  A comprehensive e-commerce platform for food delivery, built
-                  with Laravel and Vue.js.
-                </p>
-                <p class="text-sm text-gray-600 mb-4">
-                  <strong>Technologies:</strong>
-                  <span
-                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
-                    >Laravel</span
-                  >
-                  <span
-                    class="inline-block bg-[#4FC08D] text-white rounded px-2 py-1 text-xs mr-1"
-                    >Vue.js</span
-                  >
-                  <span
-                    class="inline-block bg-[#00758F] text-white rounded px-2 py-1 text-xs"
-                    >MySQL</span
-                  >
-                </p>
-                <a
-                  href="https://linkedin.com/in/suman-shresth"
-                  class="text-[#FF6B6B] hover:underline mt-auto inline-flex items-center"
-                >
-                  View Project <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-              </div>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-[#A3A1FF] to-[#3A3897] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
-                <h3
-                  class="text-2xl font-semibold text-[#3A3897] mb-2 flex items-center"
-                >
-                  <i class="fas fa-graduation-cap mr-2"></i>
-                  Education Management System
-                </h3>
-                <p class="mb-4 flex-grow">
-                  A robust system to streamline educational institution
-                  processes, using Laravel and Livewire.
-                </p>
-                <p class="text-sm text-gray-600 mb-4">
-                  <strong>Technologies:</strong>
-                  <span
-                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
-                    >Laravel</span
-                  >
-                  <span
-                    class="inline-block bg-[#FB70A9] text-white rounded px-2 py-1 text-xs mr-1"
-                    >Livewire</span
-                  >
-                  <span
-                    class="inline-block bg-[#336791] text-white rounded px-2 py-1 text-xs"
-                    >PostgreSQL</span
-                  >
-                </p>
-                <a
-                  href="https://linkedin.com/in/suman-shresth"
-                  class="text-[#3A3897] hover:underline mt-auto inline-flex items-center"
-                >
-                  View Project <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-              </div>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-[#2962FF] to-[#1E88E5] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
-                <h3
-                  class="text-2xl font-semibold text-[#2962FF] mb-2 flex items-center"
-                >
-                  <i class="fas fa-chart-line mr-2"></i>
-                  Nepse.Site
-                </h3>
-                <p class="mb-4 flex-grow">
-                  Real-time stock market data visualization for Nepal Stock
-                  Exchange, using TradingView library.
-                </p>
-                <p class="text-sm text-gray-600 mb-4">
-                  <strong>Technologies:</strong>
-                  <span
-                    class="inline-block bg-[#F7DF1E] text-black rounded px-2 py-1 text-xs mr-1"
-                    >JavaScript</span
-                  >
-                  <span
-                    class="inline-block bg-[#2962FF] text-white rounded px-2 py-1 text-xs mr-1"
-                    >TradingView</span
-                  >
-                  <span
-                    class="inline-block bg-[#61DAFB] text-black rounded px-2 py-1 text-xs"
-                    >API Integration</span
-                  >
-                </p>
-                <a
-                  href="https://linkedin.com/in/suman-shresth"
-                  class="text-[#2962FF] hover:underline mt-auto inline-flex items-center"
-                >
-                  View Project <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-              </div>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-[#FF9800] to-[#F57C00] p-1 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div class="bg-white p-6 rounded-lg h-full flex flex-col">
-                <h3
-                  class="text-2xl font-semibold text-[#F57C00] mb-2 flex items-center"
-                >
-                  <i class="fas fa-money-bill-wave mr-2"></i>
-                  Smark Karobaar
-                </h3>
-                <p class="mb-4 flex-grow">
-                  Innovative financial management app with Laravel and React,
-                  focusing on user-friendly analytics.
-                </p>
-                <p class="text-sm text-gray-600 mb-4">
-                  <strong>Technologies:</strong>
-                  <span
-                    class="inline-block bg-[#FF2D20] text-white rounded px-2 py-1 text-xs mr-1"
-                    >Laravel</span
-                  >
-                  <span
-                    class="inline-block bg-[#61DAFB] text-black rounded px-2 py-1 text-xs mr-1"
-                    >React</span
-                  >
-                  <span
-                    class="inline-block bg-[#FF6384] text-white rounded px-2 py-1 text-xs"
-                    >Chart.js</span
-                  >
-                </p>
-                <a
-                  href="https://linkedin.com/in/suman-shresth"
-                  class="text-[#F57C00] hover:underline mt-auto inline-flex items-center"
-                >
-                  View Project <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          x-show="activeTab === 'testimonials'"
-          x-data="testimonialSlider()"
-          class="bg-gradient-to-r from-claude-light to-white p-8 rounded-lg shadow-lg mt-12"
-        >
-          <h2 class="text-3xl font-bold mb-6 text-claude-dark text-center">
-            What Clients Say
-          </h2>
-
-          <div class="relative overflow-hidden" style="height: 250px">
-            <div
-              class="absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out"
-              :style="`transform: translateX(-${currentIndex * 100}%)`"
-            >
-              <div class="w-full flex-shrink-0 px-4">
-                <div
-                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
-                >
-                  <p class="text-gray-600 italic mb-4">
-                    "Suman's expertise in Laravel transformed our web
-                    application. His ability to solve complex problems with ease
-                    is truly commendable. We couldn't be happier with the
-                    results!"
-                  </p>
-                  <p class="text-claude-dark font-semibold">
-                    - Ram Thapa, CEO of TechNepal
-                  </p>
-                </div>
-              </div>
-
-              <div class="w-full flex-shrink-0 px-4">
-                <div
-                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
-                >
-                  <p class="text-gray-600 italic mb-4">
-                    "Working with Suman was a game-changer for our project. His
-                    dedication, skill, and innovative approach ensured that our
-                    project was a huge success. Highly recommended!"
-                  </p>
-                  <p class="text-claude-dark font-semibold">
-                    - Maya Shrestha, Project Manager at Web Innovations
-                  </p>
-                </div>
-              </div>
-
-              <div class="w-full flex-shrink-0 px-4">
-                <div
-                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
-                >
-                  <p class="text-gray-600 italic mb-4">
-                    "Suman's knowledge of Laravel and his attention to detail
-                    are exceptional. He delivered a robust and scalable solution
-                    that exceeded our expectations. We look forward to working
-                    with him again."
-                  </p>
-                  <p class="text-claude-dark font-semibold">
-                    - Bikash Gurung, CTO of eCommerce Solutions Nepal
-                  </p>
-                </div>
-              </div>
-
-              <div class="w-full flex-shrink-0 px-4">
-                <div
-                  class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between"
-                >
-                  <p class="text-gray-600 italic mb-4">
-                    "Suman is a top-notch developer. His work on our application
-                    was flawless, and his ability to understand our requirements
-                    and deliver on time was impressive. We highly recommend
-                    him!"
-                  </p>
-                  <p class="text-claude-dark font-semibold">
-                    - Sunita Rai, Founder of StartUp Nepal
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex justify-center mt-4 space-x-2">
-            <button
-              @click="prevSlide"
-              class="bg-claude text-white px-4 py-2 rounded-full focus:outline-none hover:bg-claude-dark transition-colors duration-300"
-            >
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button
-              @click="nextSlide"
-              class="bg-claude text-white px-4 py-2 rounded-full focus:outline-none hover:bg-claude-dark transition-colors duration-300"
-            >
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <script>
-          function testimonialSlider() {
-            return {
-              currentIndex: 0,
-              testimonials: 4, // number of testimonials
-              nextSlide() {
-                this.currentIndex = (this.currentIndex + 1) % this.testimonials;
-              },
-              prevSlide() {
-                this.currentIndex =
-                  (this.currentIndex - 1 + this.testimonials) %
-                  this.testimonials;
-              },
-            };
-          }
-        </script>
-
-        <div x-show="activeTab === 'contact'" class="animate-fade-in">
-          <h2 class="text-3xl font-bold mb-6 text-claude-dark">
-            Contact Information
-          </h2>
-          <ul class="space-y-4">
-            <li class="flex items-center">
-              <i class="fas fa-envelope text-claude mr-4 text-2xl"></i
-              ><span class="text-lg">summonshr@gmail.com</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-phone text-claude mr-4 text-2xl"></i
-              ><span class="text-lg">+977 9841145614</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-map-marker-alt text-claude mr-4 text-2xl"></i
-              ><span class="text-lg">Kathmandu, Nepal</span>
-            </li>
-          </ul>
-        </div>
-      </main>
-
-      <footer class="mt-12 text-center text-gray-600">
-        <p>© 2024 Suman Shrestha. All rights reserved.</p>
-      </footer>
-    </div>
-
-    <style>
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .animate-fade-in-down {
-        animation: fadeInDown 0.5s ease-out;
-      }
-
-      .animate-fade-in {
-        animation: fadeIn 0.5s ease-out;
-      }
-    </style>
-  </body>
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Suman Shrestha",
-      "jobTitle": "Laravel Developer",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kathmandu",
-        "addressRegion": "Bagmati",
-        "addressCountry": "Nepal"
-      },
-      "url": "https://www.sumanshresth.com.np",
-      "sameAs": [
-        "https://github.com/summonshr",
-        "https://linkedin.com/in/suman-shresth",
-        "https://twitter.com/sumfreelancer"
-      ]
-    }
-  </script>
+</body>
 </html>
